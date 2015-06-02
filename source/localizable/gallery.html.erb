@@ -1,0 +1,22 @@
+<div class="dark-wrapper page-title">
+<div class="container inner">
+  <h1><%= t('menu.pics') %></h1>
+</div>
+<!--/.container -->
+</div>
+<div class='container inner'>
+<div class='full-portfolio'>
+<div class="isotope items" data-isotope-options='{ "itemSelector": ".item", "layoutMode": "cellsByRow" }'>
+    <% (1..15).each do |i| %>
+      <div class="item grid-sizer web">
+        <figure>
+          <a href="images/gallery/g<%= i %>.jpg" class="fancybox-media" data-rel="grid-portfolio" rel="grid-portfolio">
+            <div class="text-overlay">
+              <div class="info"><span>Kliknij aby powiększyć</span></div>
+            </div>
+            <img src="images/gallery_thumbs/g<%= i %>.jpg" alt=""> </a></figure>
+      </div>
+    <% end %>
+  </div>
+</div>
+</div>
