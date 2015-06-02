@@ -1,0 +1,60 @@
+pl: 
+  days:
+    monday: Poniedziałek
+    tuesday: Wtorek
+    wednesday: Środa
+    thursday: Czwartek
+    friday: Piątek
+    saturday: Sobota
+    sunday: Niedziela
+  menu:
+    schedule_title: Grafik
+    class_types: Rodzaje zajęć
+    beginners_info: Jak zacząć ?
+    prices: Cennik
+    about_ay3: O nas
+    teachers: Nauczyciele
+    space: Nasz shala
+    events: Wydarzenia
+    media: Media
+    pics: Zdjęcia
+    videos: Wideo
+    blog: Blog
+    contact: Kontakt
+    talk_with_us: Porozmawiaj z nami
+    how_to_start: Rozpocznij przygodę z Jogą
+
+  teachers:
+    elo: Urodziłam się i dorastałam w Caracas w Wenezueli. Moja przygoda z praktyką Ashtanga Vinyasa Yoga zaczęła się kiedy miałam 25 lat i od razu się zakochałam, nigdy wcześniej nie praktykowałam nic podobnego. Widząc po raz pierwszy zaawansowanych uczniów i nauczycieli praktykujących jogę, pomyślałam "ok, fajnie .. ale ja nigdy nie będę w stanie robić pozycji jak oni, ale spróbuję i dam z siebie wszystko". Po pewnym czasie, zaobserwowałam, że poprzez stałą praktykę jestem w stanie wykonać rzeczy, które wydawały się wcześniej niemożliwe, niektóre szybciej, inne wymagają wiecej czasu. Ashtanga tak mnie oczarowała, że odwiedziłam Indie już dwa razy by studiować z Lino Miele i w głównym ośrodku Ashtangi KPJAYI w Mysore .. i to nie koniec moich wyjazdów, bo wierzę, że najlepsi nauczyciele to ci którzy są też uczniami. Wierzę również, że jeżeli ja byłam w stanie nauczyć się tych wszystkich rzeczy, każdy może się ich nauczyć. Nie mówię tylko o asanach (pozycjach), mam na myśli wszystko co chcemy osiągnąć w tym życiu. To dlatego uczę jogi, aby pomóc każdemu przełamywać ograniczenia swojego umysłu i udowodniać, że poprzez małe kroki każdego dnia, nawet najtrudniejsze rzeczy da się zrobić. Nasza nauka nigdy się nie kończy i do naszego ostatniego dnia, możemy się ciągle zmieniać i rosnąć,
+    artur: Zawsze fascynowały mnie dyscypliny łączące umysł i ciało, dlatego przez wiele lat trenowałem sztuki walki. Pare lat temu sytuacja zdrowotna zmusiła mnie do przerwania treningów brazylijskiego jiu jitsu. Szukałem czegoś co da mi podobne uczucie bycia obecnym, flow i wdzięcznego ruchu. Bedąć w Brazylii w roku 2013 kolega zabrał mnie na zajęcia Ashtangi w stylu Mysore .. i to było to! Ta metoda ma wszystko czego poszukiwałem. Poprzez wymagająca ale jednocześnie płynną i lekką praktykę fizyczną, skupioną na oddechu, mogłem wreszcie wyciszyć gadanie w głowie. Byłem wkręcony. Od tamtego czasu praktykuję codziennie, poprzez asany nie tylko moje ciało stało się lżejsze i bardziej elastyczne, ale i umysł. Każdego dnia przelewając pot na macie, uczę się jak być milszą, bardziej skromną i obecną osobą.
+  class_types:
+    mysore: Mysore
+    meditation: Medytacja
+    led_class: Pierwsza Seria Prowadzona
+    yoga_for_children: Joga dla dzieci
+  index:
+    header: pl
+    text: 
+  ashtanga:
+    meaning_header: Znaczenie
+    meaning_1: Nazwa 'Ashtanga Vinyasa Yoga' pochodzi z sanskrytu i oznacza
+    meaning_ashtanga: Ashtanga - dosłownie oznacza osiem kończyn
+    meaning_vinyasa: Vinyasa - ruch połączony z oddechem w nierozerwalną całość
+    meaning_yoga: Yoga - unia, jedność, zjednoczenie
+    meaning_finish: A więc oznacza to, że jest to praktyka zaplanowana do rozwoju 8 gałęzi jogi poprzez system asan (pozycji) połączonych oddechem.
+    practice_header: Praktyka
+    practice_1: W systemie Ashtanga Yoga, możemy wróżnić trzy części praktyki
+    practice_sn: Surya Namaskara A i B (Powitania Słońca A i B) to sekwencja pozwalająca praktykującemu zsynchronizować ruch z oddechem, rozgrzeje i uelastyczni ciało, przygotowując je na reszte praktyki.
+    practice_md: Sekwencja asan zależąca indywidualnie od doświadczenia praktykującego, rodzaju jego ciała i tego jak często praktykuje.
+      Oryginalnie Ashtanga Yoga podzielona jest na trzy serie. Początek nauki zaczyna się od Pierwszej Serii, czas przejścia do kolejnej serii uzależniony jest od typu ciała praktykującego oraz jego dedykacji i może trwać od 3 miesięcy do kilku lat.
+    practice_fn: Sekwencja końcowa - praktykę kończy się pozycjami odwróconymi, bez wykonania tej sekwencji możliwy jest rozwój chorób. Sekwencja końcowa balansuję ciało, poprawia krążenie, wytwarzanie ciepła, ciśnienie krwi, stabilizuję oddech i tętno, pozostawiająć uczucie spokoju.
+
+    tristhana_header: Tristhana
+    tristhana_1: Podczas praktyki skupiamy uwagę w trzech miejscach - na pozycji, oddechu i punkcie spojrzenia.
+    mysore_header: Styl Mysore
+    mysore_content: Każda osoba jest wyjątkowa i ma inne potrzeby, nie każdy może wykonać taką samą praktykę - początkujący praktykują krócej i mniej intensywnie, niż osoby z doświadczeniem. Niektórzy są naturalnie bardzo elestyczni, inni silni, dlatego każdy powinien praktykować na swoim poziomie i w swoim tempie. Na zajęciach w stylu Mysore każdy praktykujący wykonuję swoją sekwencje, nauczyciel pomaga w trudnych pozycjach, oraz dostosowuje praktyke do ucznia. Nauczyciel udziela pomocy, "poprawiając" asany, fizycznie lub werbalnie.
+    parampara_content: Parampara to linia przekazu (nauczycieli i uczniów) wiedzy w sposób bezpośredni. Dla wyjaśnienia - Krishnamacharya przekazał wiedzę swojemu uczniowi, którym był Sri K. Patthabi Jois. Patthabi Jois zaczął przekazywać te wiedzę swojej rodzinie (Saraswati, Sharath) oraz zachodnim uczniom (np. Lino Miele, Tim Miller Richard Freeman John Scott i młodszej generacji nauczycieli jak Kino McGregor, Mark Robberds itp) i wielu innym, a ci przekazują tę wiedzę dalej, następnym generacjom. Najważniejszą częścią tradycji Ashtanga Yoga jest związek między nauczycielem i uczniem. Dlaczego ? Między nauczycielem i uczniem musi występować wzajemne zaufanie. Nauczyciel zna ucznia, jego potrzeby, możliwości, trudności i na tej podstawie dostosowuję praktykę do ucznia. Uczeń zna i ufa nauczycielowi, co powoduje uczucie bezpieczeństwa, motywacji i inspiracji .. i tutaj zaczyna się magia Ashtangi.
+
+  temporary:
+    when_open: Już od lipca zaczynami pierwszy w Trójmiasto tradycyjny program Mysore. Oprócz tego w naszym miejscu znajdziecie również zajęcia jogi dla początkujących, jogę dla dzieci oraz medytację.
+    classes_now: Zapraszamy również na zajęcia Ashtanga Yoga do Joga Parku w każdą środę o 7, czwartek o 17 i sobotę 14:30. Zajęcia prowadzi niezastąpiona Eloisa.
