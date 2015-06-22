@@ -10298,6 +10298,11 @@ footer {
   padding: 20px;
   text-align: center; }
 
+/* line 3135, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css */
+.schedule-image {
+  width: 90%;
+  margin: 0 auto; }
+
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
 /* line 3, /Users/kurczaczek/ay3/ay3/source/stylesheets/plugins.css */
 .fancybox-wrap,

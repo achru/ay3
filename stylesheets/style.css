@@ -3132,3 +3132,7 @@ footer {
   padding: 20px;
   text-align: center;
 }
+.schedule-image {
+  width: 90%;
+  margin: 0 auto;
+}
