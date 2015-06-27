@@ -3728,3 +3728,11 @@ footer {
 /* line 3146, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
 .class-types {
   padding-top: 20px; }
+
+/* line 3150, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+.price-table td, .price-table th {
+  text-align: center; }
+
+/* line 3154, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+.info-pricing {
+  text-align: left; }
