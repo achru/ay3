@@ -917,8 +917,8 @@ footer ul.tag-list li a:hover {
   transition: all 0.3s;
   -webkit-transform: translateZ();
   image-rendering: -webkit-optimize-contrast;
-  margin-top: -30px;
-  height: 120px;
+  margin-top: -10px;
+  height: 60px;
   width: inherit; }
 
 /* line 798, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
