@@ -928,7 +928,7 @@ footer ul.tag-list li a:hover {
   -webkit-transform: translateZ();
   image-rendering: -webkit-optimize-contrast;
   margin-top: -10px;
-  height: 60px;
+  height: 45px;
   width: inherit; }
 
 /* line 806, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
@@ -3337,12 +3337,12 @@ textarea {
   .full-portfolio .isotope .grid-sizer {
     width: 25%; } }
 @media (min-width: 992px) {
-  /* line 2808, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2809, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .nav.navbar-nav > li:last-of-type > ul {
     left: auto;
     right: 0; }
 
-  /* line 2812, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2813, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .nav.navbar-nav > li:last-of-type > ul ul {
     left: auto;
     right: 100%;
@@ -3350,38 +3350,38 @@ textarea {
     margin-right: -1px;
     border-right: 1px solid rgba(0, 0, 0, 0.15) !important; }
 
-  /* line 2819, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2820, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar .dropdown-submenu > a:after {
     display: none; }
 
-  /* line 2822, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2823, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar .dropdown-submenu > .dropdown-menu:before {
     display: none; }
 
-  /* line 2825, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2826, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar .dropdown-submenu > .dropdown-menu {
     margin-top: 0;
     padding-top: 0; }
 
-  /* line 2829, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2830, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .dropdown-submenu {
     position: relative; }
 
-  /* line 2832, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2833, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .dropdown-submenu > .dropdown-menu {
     top: 0;
     left: 100%;
     margin-left: 0; }
 
-  /* line 2837, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2838, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .dropdown-submenu > .dropdown-menu li {
     border-left: 1px solid rgba(0, 0, 0, 0.15) !important; }
 
-  /* line 2840, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2841, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .dropdown-submenu:hover > .dropdown-menu {
     display: block; }
 
-  /* line 2843, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2844, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .dropdown-submenu > a:after {
     display: block;
     content: " ";
@@ -3391,16 +3391,16 @@ textarea {
     margin-top: 5px;
     margin-right: -10px; }
 
-  /* line 2855, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2856, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .dropdown-submenu.pull-left {
     float: none; }
 
-  /* line 2858, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2859, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .dropdown-submenu.pull-left > .dropdown-menu {
     left: -100%;
     margin-left: 10px; }
 
-  /* line 2862, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2863, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .open > .dropdown-menu,
   .open > .dropdown-menu > .dropdown-submenu > .dropdown-menu {
     animation-name: slidenavAnimation;
@@ -3430,7 +3430,7 @@ textarea {
     to {
       opacity: 1; } } }
 @media (max-width: 991px) {
-  /* line 2898, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2899, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar-brand {
     position: relative;
     -webkit-box-shadow: none;
@@ -3438,18 +3438,18 @@ textarea {
     box-shadow: none;
     margin: 0; }
 
-  /* line 2905, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2906, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .btn.responsive-menu {
     display: block; }
 
-  /* line 2908, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2909, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar .nav,
   .navbar .dropup,
   .navbar .dropdown,
   .navbar .collapse {
     position: relative; }
 
-  /* line 2914, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2915, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar .dropdown-menu {
     position: relative;
     left: inherit;
@@ -3460,66 +3460,66 @@ textarea {
     background: none;
     padding: 0; }
 
-  /* line 2924, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2925, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar .dropdown-menu li {
     border: none; }
 
-  /* line 2927, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2928, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar-nav > li > a,
   .navbar .dropdown-menu li a,
   .navbar li a:hover {
     border-top: 1px solid rgba(0, 0, 0, 0.15); }
 
-  /* line 2932, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2933, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar-nav > li:first-child > a {
     border-top: none; }
 
-  /* line 2935, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2936, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar .nav .open > a,
   .navbar .nav .open > a:hover,
   .navbar .nav .open > a:focus {
     background: none;
     border-color: rgba(0, 0, 0, 0.15); }
 
-  /* line 2941, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2942, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar-nav > li > a,
   .navbar .dropdown-menu li a,
   .navbar .dropdown-menu li a:hover,
   .navbar .dropdown-menu li a.active {
     padding: 12px 0 !important; }
 
-  /* line 2947, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2948, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar-nav .open .dropdown-menu > li > a {
     line-height: 1; }
 
-  /* line 2954, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2955, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar-nav > li > a,
   .navbar .dropdown-menu li a {
     color: #FFF !important; }
 
-  /* line 2958, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2959, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar .dropdown-menu {
     padding-left: 20px; }
 
-  /* line 2961, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2962, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar-nav > li {
     border: none; }
 
-  /* line 2964, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2965, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar .btn.responsive-menu {
     margin: 53px 0; }
 
-  /* line 2967, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2968, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar.fixed .btn.responsive-menu {
     margin: 13px 0; }
 
-  /* line 2970, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2971, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar-header {
     float: left;
     width: 100%;
     background: #FFF !important; }
 
-  /* line 2975, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2976, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar-header:after {
     content: '';
     display: block;
@@ -3527,12 +3527,12 @@ textarea {
     clear: both;
     visibility: hidden; }
 
-  /* line 2982, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2983, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar .container {
     width: 100%;
     padding: 0; }
 
-  /* line 2986, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2987, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar .navbar-collapse {
     width: 100%;
     float: none !important;
@@ -3542,77 +3542,77 @@ textarea {
     overflow: hidden;
     background: #38393b; }
 
-  /* line 2995, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 2996, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar .navbar-nav {
     width: 720px;
     margin: 20px auto 0;
     padding: 0; }
 
-  /* line 3000, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3001, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar .basic-wrapper {
     width: 720px;
     margin: 0 auto;
     display: block;
     text-align: center; }
 
-  /* line 3006, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3007, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   figure img {
     width: 100%; }
 
-  /* line 3009, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3010, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar .dropdown-menu:before,
   .navbar li.social-dropdown {
     display: none !important; }
 
-  /* line 3013, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3014, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar .dropdown-menu li {
     background: none; }
 
-  /* line 3016, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3017, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   footer p.pull-left,
   footer ul.pull-right {
     float: none !important;
     text-align: center; }
 
-  /* line 3021, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3022, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .sub-footer p {
     margin-bottom: 10px !important; } }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 3026, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3027, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .container {
     padding-right: 15px;
     padding-left: 15px; }
 
-  /* line 3030, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3031, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .full-portfolio .isotope .item,
   .full-portfolio .isotope .grid-sizer,
   .classic-masonry .isotope .item {
     width: 33.3339%; } }
 @media (max-width: 767px) {
-  /* line 3037, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3038, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .full-portfolio .isotope .item,
   .full-portfolio .isotope .grid-sizer,
   .classic-masonry .isotope .item {
     width: 100%; }
 
-  /* line 3042, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3043, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .container {
     padding-right: 20px;
     padding-left: 20px; }
 
-  /* line 3046, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3047, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar .container {
     padding-right: 0px;
     padding-left: 0px; }
 
-  /* line 3050, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3051, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar .navbar-nav {
     width: 100%;
     margin: 20px auto 0;
     padding-left: 20px;
     padding-right: 20px; }
 
-  /* line 3056, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3057, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar .basic-wrapper {
     width: 100%;
     padding-left: 20px;
@@ -3620,129 +3620,133 @@ textarea {
     margin: 0 auto;
     display: block; }
 
-  /* line 3063, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3064, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar .navbar-nav > li {
     margin-left: 0; }
 
-  /* line 3066, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3067, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   [class*="col-"] {
     margin-bottom: 30px; }
 
-  /* line 3069, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3070, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   footer [class*="col-"]:last-of-type {
     margin-bottom: 0; }
 
-  /* line 3072, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3073, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .forms [class*="col-"] {
     margin-bottom: 0px; }
 
-  /* line 3075, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3076, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .services-1 .divide30 {
     display: none; }
 
-  /* line 3078, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3079, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   #comments .user {
     display: none; }
 
-  /* line 3081, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3082, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   #comments ul.children {
     padding: 0 0 0 20px; }
 
-  /* line 3084, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3085, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   #comments .arrow-box {
     margin-left: 0; }
 
-  /* line 3087, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3088, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .about-author .author-image {
     display: none; }
 
-  /* line 3090, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3091, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .sidebar {
     margin-top: 70px;
     padding-left: 15px !important; }
 
-  /* line 3094, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3095, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .dropdown.pull-right {
     display: block;
     padding: 10px 0 5px !important;
     float: none !important;
     clear: both; }
 
-  /* line 3100, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3101, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .portfolio .pull-right > .dropdown-menu {
     left: 0 !important;
     right: auto; }
 
-  /* line 3104, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3105, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .portfolio .button-group.dropdown-menu:before {
     left: 15px;
     right: auto; }
 
-  /* line 3108, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3109, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   [class*="col-sm-"].lp30 {
     padding-left: 15px; }
 
-  /* line 3111, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+  /* line 3112, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
   .navbar.fixed .navbar-collapse .navbar-nav {
     max-height: 230px !important;
     overflow-y: scroll; } }
-/* line 3116, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+/* line 3117, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
 .brick-wall:first-child {
   padding-bottom: 10px; }
 
-/* line 3119, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+/* line 3120, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
 .brick {
   text-align: center;
   opacity: 0.8; }
 
-/* line 3123, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+/* line 3124, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
 .brick-image {
   width: 100%; }
 
-/* line 3126, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+/* line 3127, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
 .brick:hover {
   opacity: 1; }
 
-/* line 3129, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+/* line 3130, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
 footer {
   margin-top: 30px; }
 
-/* line 3132, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+/* line 3133, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
 .time {
   font-weight: bold; }
 
-/* line 3135, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+/* line 3136, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
 .name {
   text-align: center;
   padding-top: 1em; }
 
-/* line 3139, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+/* line 3140, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
 .video {
   padding: 20px;
   text-align: center; }
 
-/* line 3143, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+/* line 3144, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
 .schedule-image {
   width: 90%;
   margin: 0 auto; }
 
-/* line 3147, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+/* line 3148, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
 .day ul {
   list-style: none;
   padding-left: 0; }
 
-/* line 3151, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+/* line 3152, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
 .day {
   border-left: 1px solid #E2E2E2; }
 
-/* line 3154, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+/* line 3155, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
 .class-types {
   padding-top: 20px; }
 
-/* line 3158, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+/* line 3159, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
 .price-table td, .price-table th {
   text-align: center; }
 
-/* line 3162, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+/* line 3163, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
 .info-pricing {
   text-align: left; }
+
+/* line 3166, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+.facebook-feed {
+  text-align: center; }

@@ -1,5 +1,14 @@
 $(document).ready(function () {
 "use strict";
+  $('.social-feed').socialfeed({
+    facebook: {
+      accounts: ['@ashtangayogatrojmiasto', '@324122041121572'],
+      limit: 4,
+      access_token:'150849908413827|a20e87978f1ac491a0c4a721c961b68c'
+    },
+    length: 500,
+    show_media: true
+  });
 	/*-----------------------------------------------------------------------------------*/
 	/*	VIDEO
 	/*-----------------------------------------------------------------------------------*/
