@@ -1,3752 +1,1634 @@
-@charset "UTF-8";
-/*-------------------------------------------------------------------------------------
-Theme Name:	Keepsake
-Theme URI: 	http://themes.iki-bir.com/keepsake
-Version:	1.0
-Author:		elemis
--------------------------------------------------------------------------------------*/
-/*-------------------------------------------------------------------------------------
-[TABLE OF CONTENTS]
+/*************************************************************/
+/********************* TABLE OF CONTENTS *********************/
+/*************************************************************/
+/**                                                         **/
+/** General Styles                                          **/
+/** Typography                                              **/
+/** Regions                                                 **/
+/**  - Region & Block Spacings                              **/
+/**  - Header                                               **/
+/** Venobox                                                 **/
+/** Revolution Slider                                       **/
+/** Menus                                                   **/
+/**  - Nav                                                  **/
+/**  - Main Menu                                            **/
+/** Highlighted                                             **/
+/** Side Image                                              **/
+/** Panels                                                  **/
+/** Portfolio                                               **/
+/**  - Portfolio Block                                      **/
+/** Blog                                                    **/
+/**  - Blog Single                                          **/
+/**  - News Block                                           **/
+/** Comments                                                **/
+/** Pagination                                              **/
+/** Team                                                    **/
+/** Google Maps                                             **/
+/** Tabs                                                    **/
+/** Accordions                                              **/
+/** Buttons                                                 **/
+/** Labels                                                  **/
+/** Alerts                                                  **/
+/** Progress Bars                                           **/
+/** Forms                                                   **/
+/** Colors & Backgrounds                                    **/
+/**  - Text Color Palette                                   **/
+/**  - Background Colors                                    **/
+/**  - Background Images                                    **/
+/**                                                         **/
+/*************************************************************/
+/*************************************************************/
 
-	00. RESET
-	01. GENERAL
-	02. BUTTON
-	03. HEADER
-	04. FIXED MENU
-	05. ISOTOPE PORTFOLIO GRID
-	06. OVERLAY
-	07. SLIDER PRO
-	08. BASIC GALLERY
-	09. SERVICES
-	10. BLOG
-	11. AUTHOR
-	12. COMMENTS
-	13. FORMS
-	14. TOOLTIP
-	15. TABS
-	16. ACCORDION / TOGGLE
-	17. PROGRESS BAR
-	18. PRICING TABLE
-	19. PARALAX
-	20. SOCIAL ICONS
-	21. FANCYBOX
-	22. FEATURES
-	23. DIVIDERS
-	24. RESPONSIVE
 
-	text: #707070
-	hover: #DC3E38
-	headings: #4d4d4d
-	meta: #9f9f9f;
-	dark wrapper background: #eeeeee;
-	
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-family: 'bebas_neuebold';
-	font-family: 'bebas_neuebook';
-	font-family: 'bebas_neue_regularregular';
-	
--------------------------------------------------------------------------------------*/
-/*-----------------------------------------------------------------------------------*/
-/*	00. RESET
-/*-----------------------------------------------------------------------------------*/
-/* line 52, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
 
-/* line 59, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-:focus {
-  outline: 0 !important; }
+/*************************************************************/
+/*********************** General Styles **********************/
+/*************************************************************/
 
-/* line 62, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.fit-vids-style {
-  display: none; }
 
-/* line 65, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-figure {
-  margin: 0;
-  padding: 0; }
-
-/* line 69, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-figure img {
-  height: auto; }
-
-/* line 72, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-iframe {
-  border: none; }
-
-/* line 75, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-::selection {
-  background: #fefac7;
-  /* Safari */
-  color: #2f2f2f; }
-
-/* line 79, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-::-moz-selection {
-  background: #fefac7;
-  /* Firefox */
-  color: #2f2f2f; }
-
-@-webkit-keyframes rotation {
-  from {
-    -webkit-transform: rotate(0deg); }
-  to {
-    -webkit-transform: rotate(359deg); } }
-@-moz-keyframes rotation {
-  from {
-    -moz-transform: rotate(0deg); }
-  to {
-    -moz-transform: rotate(359deg); } }
-@-o-keyframes rotation {
-  from {
-    -o-transform: rotate(0deg); }
-  to {
-    -o-transform: rotate(359deg); } }
-@keyframes rotation {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(359deg); } }
-/* line 115, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
 body {
-  overflow-x: hidden !important; }
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 1.5em;
+  letter-spacing: 0;
+  color: #666;
+  word-wrap: break-word;
+}
+.header-light {
+  font-family: 'bebas_neuebold';
+  }
 
-/* line 118, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #fefefe;
-  z-index: 9999999; }
-
-/* line 127, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-#status {
-  width: 36px;
-  height: 36px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin: -18px 0 0 -18px; }
-
-/* line 135, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.spinner {
-  height: 36px;
-  width: 36px;
-  position: relative;
-  -webkit-animation: rotation .8s infinite linear;
-  -moz-animation: rotation .8s infinite linear;
-  -o-animation: rotation .8s infinite linear;
-  animation: rotation .8s infinite linear;
-  border-left: 3px solid rgba(239, 95, 96, 0.15);
-  border-right: 3px solid rgba(239, 95, 96, 0.15);
-  border-bottom: 3px solid rgba(239, 95, 96, 0.15);
-  border-top: 3px solid rgba(239, 95, 96, 0.8);
-  border-radius: 100%; }
-
-/*-----------------------------------------------------------------------------------*/
-/*	01. GENERAL
-/*-----------------------------------------------------------------------------------*/
-/* line 152, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  overflow-x: hidden;
-  color: #707070;
-  font-size: 15px;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%; }
-
-/* line 162, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.container {
-  padding-right: 0;
-  padding-left: 0; }
-
-/* line 166, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-body,
-li,
-address {
-  line-height: 26px; }
-
-/* line 171, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-input,
-button,
-select,
-textarea {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 15px;
-  font-weight: normal; }
-
-/* line 179, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-p {
-  margin: 0 0 15px; }
-
-/* line 182, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
 a {
-  color: #DC3E38;
-  -webkit-transition: all 200ms ease-in;
-  -o-transition: all 200ms ease-in;
-  -moz-transition: all 200ms ease-in; }
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
 
-/* line 188, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-a.nocolor {
-  color: #707070; }
-
-/* line 191, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-a.nocolor:hover {
-  color: #DC3E38; }
-
-/* line 194, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
 a:hover,
-a:focus {
-  color: #232323;
-  text-decoration: none; }
+a:focus,
+a:active {
+  color: #444;
+  text-decoration: none;
+  outline: 0;
+}
 
-/* line 199, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.colored {
-  color: #DC3E38; }
 
-/* line 202, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
+
+/*************************************************************/
+/************************* Typography ************************/
+/*************************************************************/
+
+.font-quicksand  { font-family: 'Quicksand', sans-serif; }
+.font-roboto     { font-family: 'Roboto', sans-serif; }
+.font-montserrat { font-family: 'Montserrat', sans-serif; }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'bebas_neuebold';
+  margin: 1.2em 0 1em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #444;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
   margin-top: 0;
-  color: #4d4d4d;
-  margin-bottom: 10px;
-  font-weight: normal;
-  letter-spacing: 1px; }
+}
 
-/* line 215, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-h1 {
-  font-size: 28px;
-  line-height: 34px;
-  letter-spacing: 1.5px; }
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child {
+  margin-bottom: 0;
+}
 
-/* line 220, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-h2 {
-  font-size: 25px;
-  line-height: 30px;
-  letter-spacing: 1.5px; }
+h1 { font-size: 3em; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 2em; }
+h4 { font-size: 1.6em; }
+h5 { font-size: 1.3em; }
+h6 { font-size: 1.1em; }
 
-/* line 225, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-h3 {
-  font-size: 20px;
-  line-height: 24px; }
+p, span {
+  font-size: 1em;
+  line-height: 1.6em;
+}
 
-/* line 229, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-h4 {
-  font-size: 18px;
-  line-height: 24px; }
+p:last-child {
+  margin-bottom: 0;
+}
 
-/* line 233, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-h5 {
-  font-size: 15px;
-  line-height: 22px; }
+blockquote {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 40px 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
 
-/* line 237, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-h6 {
-  font-size: 14px;
-  line-height: 20px; }
+.icon {
+  display: inline-block;
+  line-height: 1;
+}
 
-/* line 241, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.intro h1 {
-  font-family: 'bebas_neuebook';
-  font-size: 38px;
-  line-height: 40px;
-  font-weight: normal;
-  letter-spacing: 3px;
-  margin-bottom: 15px; }
+.icon-list {
+  list-style: none;
+}
 
-/* line 249, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.page-title h1,
-.page-title h2 {
-  font-family: 'bebas_neuebook';
-  font-size: 32px;
-  line-height: 40px;
-  font-weight: normal;
-  letter-spacing: 2px;
-  margin: 0; }
+.icon-list li {
+  position: relative;
+}
 
-/* line 258, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.page-title .inner {
-  padding-top: 40px;
-  padding-bottom: 40px; }
-
-/* line 262, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.onepage .page-title,
-.onepage .intro {
-  text-align: center;
-  position: relative; }
-
-/* line 267, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.onepage .page-title:after {
-  content: "";
-  display: block;
+.icon-list i {
   position: absolute;
-  bottom: -9px;
-  left: 50%;
-  margin-left: -9px;
-  width: 9px;
-  height: 9px;
-  border-left: 9px solid transparent;
-  border-right: 9px solid transparent;
-  border-top: 9px solid #eeeeee; }
+  top: 0.5em;
+  left: -2em;
+  width: 2em;
+  font-size: 0.8em;
+  line-height: 1em;
+}
 
-/* line 280, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.intro p {
-  margin: 0; }
-
-/* line 283, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.lead {
-  font-family: 'bebas_neuebook';
-  font-size: 28px;
-  line-height: 30px;
-  color: #4d4d4d;
-  letter-spacing: 1.5px; }
-
-/* line 290, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.onepage section .lead,
-.parallax .lead {
-  font-family: inherit;
-  letter-spacing: normal;
-  font-size: 22px;
-  line-height: 32px;
-  font-weight: 300;
-  color: #707070; }
-
-/* line 299, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-h2.post-title {
-  margin-bottom: 10px;
-  font-size: 22px; }
-
-/* line 303, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.classic-blog .post-title {
-  font-size: 25px;
-  line-height: 30px; }
-
-/* line 307, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-h3 span.meta:before {
-  display: inline-block;
-  content: "-";
-  padding-right: 5px;
-  padding-left: 3px; }
-
-/* line 313, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.post-title a {
-  color: #4d4d4d; }
-
-/* line 316, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.post-title a:hover {
-  color: #DC3E38; }
-
-/* line 319, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.section-title {
-  font-size: 22px;
-  line-height: 30px;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-  letter-spacing: 1.5px; }
-
-/* line 326, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.section-title:after {
-  content: "--";
-  display: inline-block;
-  padding-left: 5px;
-  color: #DC3E38; }
-
-/* line 332, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.section-title.text-center:before {
-  content: "--";
-  display: inline-block;
-  padding-right: 5px;
-  color: #DC3E38; }
-
-/* line 338, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.team h3 {
-  margin-bottom: 5px; }
-
-/* line 341, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.team p {
-  margin-bottom: 20px; }
-
-/* line 344, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.team figure {
-  margin-bottom: 15px; }
-
-/* line 347, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.dark-wrapper {
-  background: #eeeeee; }
-
-/* line 350, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.black-wrapper {
-  background: #2d2d30;
-  color: #bdbdbd; }
-
-/* line 354, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.black-wrapper h1,
-.black-wrapper h2,
-.black-wrapper h3,
-.black-wrapper h4,
-.black-wrapper h5,
-.black-wrapper h6 {
-  color: #e3e3e3; }
-
-/* line 362, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.black-wrapper .lead {
-  color: #9d9d9d; }
-
-/* line 365, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.black-wrapper a {
-  color: #FFF; }
-
-/* line 368, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.black-wrapper a:hover {
-  color: #DC3E38; }
-
-/* line 371, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.inner {
-  padding-top: 20px;
-  padding-bottom: 20px; }
-
-/* line 375, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.inner-small {
-  padding-top: 50px;
-  padding-bottom: 50px; }
-
-/* line 379, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-ul {
-  padding: 0 0 0 18px; }
-
-/* line 382, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-ol {
-  padding: 0 0 0 20px; }
-
-/* line 385, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-ul,
-ol {
-  margin-bottom: 15px; }
-
-/* line 389, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-ul.circled {
+ul.tags {
   padding: 0;
-  list-style: none; }
+  margin: 0;
+  list-style: none;
+}
 
-/* line 393, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-ul.circled li:before {
-  content: '●';
-  margin-right: 10px;
-  font-weight: normal;
-  vertical-align: top;
+ul.tags li{
   display: inline-block;
-  color: #DC3E38;
-  font-size: 11px; }
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
 
-/* line 402, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.thin {
-  width: 80%;
-  margin: 0 auto; }
+ul.tags li:last-child {
+  margin-right: 0px;
+}
 
-/* line 406, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.dropcap {
-  font-weight: 800;
+.list-inline {
+  margin-left: 0;
+}
+
+.text-shadow {
+  text-shadow: 0px 1px 3px rgba(0,0,0,.5);
+}
+
+.img-bottom {
+  margin-bottom: -100px;
+}
+
+.line-height-46 { line-height: 46px!important; }
+
+
+
+/*************************************************************/
+/************************** Regions **************************/
+/*************************************************************/
+
+/** Region & Block Spacings **/
+.region,
+.block {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/** Header **/
+header {
+  z-index: 9999;
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+
+.header-fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.header-light {
+  background-color: rgba(255,255,255,.95);
+}
+
+.header-light,
+.header-light a {
+  color: #444;
+}
+
+.header-dark {
+  background-color: rgba(0,0,0,.7);
+}
+
+.header-dark,
+.header-dark a {
+  color: #fff;
+}
+
+.header-transparent {
+  background-color: transparent;
+}
+
+.header-invisible {
+  opacity: 0;
+}
+
+.stuck.header-light.header-transparent {
+  background-color: rgba(255,255,255,.95);
+}
+
+.stuck.header-dark.header-transparent {
+  background-color: rgba(0,0,0,.5);
+}
+
+.stuck.header-invisible {
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+
+  .header-fixed {
+    position: static;
+  }
+
+  header.header-light.header-transparent {
+    background-color: rgba(255,255,255,.95);
+  }
+
+  header.header-dark.header-transparent {
+    background-color: rgba(0,0,0,.5);
+  }
+
+}
+
+
+
+/*************************************************************/
+/************************** Venobox **************************/
+/*************************************************************/
+
+.vbox-overlay *,
+.vbox-overlay *:before,
+.vbox-overlay *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+.vbox-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: rgba(0,0,0,.85);
+  opacity: 0;
+  -webkit-transition: opacity .25s ease-in-out;
+     -moz-transition: opacity .25s ease-in-out;
+          transition: opacity .25s ease-in-out;
+}
+
+.relativo {
+  position: relative;
   display: block;
   float: left;
-  font-size: 49px;
-  padding: 0;
-  margin: 0;
-  margin: 12px 8px 0 0;
-  text-transform: uppercase; }
-
-/* line 416, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-hr {
-  border: none;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.11);
-  padding-bottom: 40px;
-  margin-bottom: 70px; }
-
-/* line 422, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.alert {
-  padding-bottom: 13px; }
-
-/* line 425, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-blockquote {
-  background: #eeeeee;
-  border: 0;
-  padding: 30px 35px;
-  margin: 20px 0 0 0; }
-
-/* line 431, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-blockquote p {
-  font-size: 22px;
-  line-height: 32px;
-  font-weight: 300; }
-
-/* line 436, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-blockquote small {
-  margin-top: 15px;
-  font-family: 'bebas_neuebold';
-  font-size: 16px;
-  color: #4d4d4d;
-  letter-spacing: 1px;
-  font-weight: normal; }
-
-/* line 444, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.testimonials {
-  list-style: none; }
-
-/* line 447, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.testimonials blockquote {
-  background: none;
-  padding: 0;
-  margin: 0; }
-
-/* line 452, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.testimonials blockquote p {
-  background: #eeeeee;
-  padding: 30px 35px;
-  position: relative;
-  margin: 0 0 10px 0;
-  font-size: 18px;
-  line-height: 28px; }
-
-/* line 460, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.testimonials blockquote small:before {
-  content: ""; }
-
-/* line 463, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.testimonials [class*="col-"] {
-  margin-bottom: 30px; }
-
-/* line 466, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.testimonials blockquote small {
-  float: right; }
-
-/* line 469, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.testimonials [class*="col-"] blockquote p:after {
-  border-color: #edf1f2 transparent;
-  border-style: solid;
-  border-width: 20px 0 0 20px;
-  bottom: -20px;
-  content: "";
-  display: block;
-  position: absolute;
-  width: 0;
-  right: 30px; }
-
-/* line 480, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-#map {
   width: 100%;
-  height: 400px; }
+  height: 100%;
+}
 
-/* line 484, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-#map.small {
-  height: 200px; }
+.vbox-preloader {
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  width: 32px; 
+  height: 32px;
+  margin-top: -16px;
+  margin-left: -16px; 
+  overflow: hidden;
+  text-indent: -100px;
+  background-image: url(../img/lightbox/preload-circle.png);
+  -webkit-animation: playload 1.4s steps(18) infinite;
+     -moz-animation: playload 1.4s steps(18) infinite;
+      -ms-animation: playload 1.4s steps(18) infinite;
+       -o-animation: playload 1.4s steps(18) infinite;
+          animation: playload 1.4s steps(18) infinite;
+}
 
-/* line 487, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.footer a {
-  color: #bdbdbd !important; }
+@-webkit-keyframes playload {
+   from { background-position:    0px; }
+     to { background-position: -576px; }
+}
 
-/* line 490, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.footer a:hover {
-  color: #DC3E38 !important; }
+@-moz-keyframes playload {
+   from { background-position:    0px; }
+     to { background-position: -576px; }
+}
 
-/* line 493, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-footer [class*="col-"] .widget {
-  margin-top: 25px; }
+@-ms-keyframes playload {
+   from { background-position:    0px; }
+     to { background-position: -576px; }
+}
 
-/* line 496, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-footer [class*="col-"] .widget:first-child {
-  margin-top: 0; }
+@-o-keyframes playload {
+   from { background-position:    0px; }
+     to { background-position: -576px; }
+}
 
-/* line 499, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-footer ul.tag-list li a {
-  color: #e3e3e3;
-  background: #242426; }
+@keyframes playload {
+   from { background-position:    0px; }
+     to { background-position: -576px; }
+}
 
-/* line 503, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.footer-menu {
-  padding: 0;
-  margin: 0;
-  list-style: none; }
+.vbox-close {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 20px;
+  overflow: hidden;
+  color: #fff;
+  text-indent: -100px;
+  cursor: pointer;
+  background: url(../img/lightbox/close.gif) no-repeat;
+  background-position: center center;
+}
 
-/* line 508, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.footer-menu li {
-  display: inline;
-  padding-left: 10px;
-  font-family: 'bebas_neuebold';
-  font-size: 15px;
-  font-weight: normal;
-  letter-spacing: 1.5px; }
+.vbox-next, .vbox-prev {
+  position: fixed;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  overflow: hidden;
+  color: #fff;
+  text-indent: -100px;
+  cursor: pointer;
+}
 
-/* line 516, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.footer-menu li:before {
-  display: inline-block;
-  content: "|";
-  padding-right: 12px; }
+.vbox-prev {
+  left: 10px;
+  background: url(../img/lightbox/prev.gif) center center no-repeat;
+}
 
-/* line 521, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.footer-menu li:first-child:before {
-  display: none; }
+.vbox-next {
+  right: 10px;
+  background: url(../img/lightbox/next.gif) center center no-repeat;
+}
 
-/* line 524, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.contact-info {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
+.vbox-title {
+  position: fixed;
+  top: -1px;
+  left: 0;
+  display: none;
+  float: left;
+  width: 100%;
+  height: 60px;
+  padding: 0 40px;
+  overflow: hidden;
+  font-size: 1em;
+  line-height: 60px;
+  color: #fff;
+  text-align: center;
+  background: #161617;
+}
 
-/* line 529, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.contact-info i {
-  margin-right: 7px;
-  color: #e3e3e3; }
+.vbox-num {
+  position: fixed;
+  top: -1px;
+  left: 0;
+  display: none;
+  height: 40px;
+  padding: 6px 10px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 28px;
+  color: #fff;
+  cursor: pointer;
+  background: #161617;
+}
 
-/* line 533, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-footer ul.circled li:before {
-  color: #e3e3e3; }
+.vbox-inline {
+  width: 420px;
+  height: 315px;
+  padding: 10px;
+  margin: 0 auto;
+  overflow: auto;
+  text-align: left;
+  background: #fff;
+}
 
-/* line 536, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sub-footer {
-  background: #29292c;
-  padding: 35px 0; }
-
-/* line 540, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sub-footer p {
-  padding: 0;
-  margin: 0; }
-
-/*-----------------------------------------------------------------------------------*/
-/*	02. BUTTON
-/*-----------------------------------------------------------------------------------*/
-/* line 547, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn,
-.btn-submit {
-  color: #fff !important;
-  background: #DC3E38;
-  margin-bottom: 10px;
-  margin-right: 4px;
-  padding: 10px 17px 8px;
-  font-weight: normal;
-  text-shadow: none;
+.venoframe {
+  width: 960px;
+  height: 720px;
   border: none;
-  -webkit-border-radius: 0;
+}
+
+@media (max-width: 992px) {
+  .venoframe {
+    width: 640px;
+    height: 480px;
+  }
+}
+
+@media (max-width: 767px) {
+  .venoframe {
+    width: 420px;
+    height: 315px;
+  }
+}
+
+@media (max-width: 460px) {
+  .vbox-inline {
+    width: 100%;
+  }
+
+  .venoframe {
+    width: 100%;
+    height: 260px;
+  }
+}
+
+.vbox-container {
+  position: relative;
+  width: 98%;
+  max-width: 1024px;
+  margin: 0 auto;
+  background: #000;
+}
+
+.vbox-content {
+  position: relative;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.vbox-container img {
+  height: auto;
+  max-width: 100%;
+}
+
+.vwrap {
+  position: relative;
+  left: 0;
+  z-index: 1;
+  float: left;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  opacity: 1;
+  -webkit-transition: opacity .25s ease-in-out;
+     -moz-transition: opacity .25s ease-in-out;
+          transition: opacity .25s ease-in-out;
+}
+
+
+
+/*************************************************************/
+/********************* Revolution Slider *********************/
+/*************************************************************/
+
+.boxedcontainer { 
+  max-width: 1170px;
+  padding: 0 30px;
+  margin: auto;
+}
+
+.tp-banner-container {
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+
+.tp-bullets.preview4 {
+  height: 17px;
+}
+
+.tp-bullets.preview4 .bullet {
+  width: 14px !important;
+  height: 14px !important;
+  margin-right: 12px !important;
+  background: rgba(255,255,255,.7) !important;
+  border: 0 !important;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+}
+
+.tp-bullets.preview4 .bullet.last {
+  margin-right: 0 !important;
+}
+
+.tp-bullets.preview4 .bullet:hover,
+.tp-bullets.preview4 .bullet.selected {
+  width: 14px !important;
+  height: 14px !important;
+  background: rgba(255,255,255,1) !important;
+  border: 0 !important;
+}
+
+
+
+/*************************************************************/
+/*************************** Menus ***************************/
+/*************************************************************/
+
+/** Nav **/
+.nav > li > a {
+  padding-left: 0;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: transparent;
+}
+
+/** Main Menu **/
+.main-menu {
+  z-index: 10;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.main-menu .navbar-right .dropdown-menu {
+  right: auto;
+  left: 0;
+}
+
+.main-menu .nav > li > a {
+  padding: 30px 20px;
+}
+
+.main-menu .nav > li:last-child > a {
+  padding-right: 0;
+}
+
+.main-menu a,
+.main-menu .active > a,
+.main-menu .nav .open > a,
+.main-menu .nav .open > a:hover,
+.main-menu .nav .open > a:focus,
+.main-menu .nav > li > a:hover,
+.main-menu .nav > li > a:focus,
+.main-menu .nav > li:hover > a,
+.main-menu .nav > li:focus > a {
+  background-color: transparent;
+}
+
+.main-menu .dropdown-menu {
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+  background-color: #222;
+  border: 0;
   border-radius: 0;
-  -webkit-transition: all 200ms ease-in;
-  -o-transition: all 200ms ease-in;
-  -moz-transition: all 200ms ease-in;
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
+}
+
+.main-menu .dropdown-menu a {
+  padding: 12px 20px;
+  border-bottom: 1px dotted #444;
+}
+
+.main-menu .dropdown-menu li:last-child a {
+  border-bottom: 0;
+}
+
+.main-menu .dropdown-menu > li > a {
+  font-weight: 300;
+  color: #cdcdcd;
+}
+
+.main-menu .dropdown-menu > .active > a,
+.main-menu .dropdown-menu > li > a:hover,
+.main-menu .dropdown-menu > li > a:focus {
+  background-color: #444;
+}
+
+.main-menu .dropdown-menu > li:hover,
+.main-menu .dropdown-menu > .active {
+  background: transparent;
+}
+
+@media (max-width: 991px) {
+
+  .main-menu .nav > li > a {
+    padding-top: 10px;
+  }
+  
+  .main-menu .nav > li:last-child > a {
+    padding-right: 20px;
+  }
+  
+  .main-menu .navbar-collapse {
+    line-height: 10px;
+    text-align: center;
+  }
+  
+  .main-menu .dropdown-menu {
+    text-align: left;
+  }
+  
+  .main-menu .navbar-nav {
+    display: inline-block;
+    float: none!important;
+  }
+  
+  .main-menu .navbar-collapse .navbar-nav.navbar-right:last-child {
+    margin-right: 0;
+  }
+
+}
+
+@media (min-width: 768px) {
+  
+  .main-menu .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+}
+
+@media (max-width: 767px) {
+  
+  .main-menu .navbar-header {
+    text-align: right;
+  }
+  
+  .main-menu .navbar-toggle {
+    float: none;
+    padding: 8px 25px;
+    margin: 20px 0;
+    color: #fff;
+    border-radius: 0;
+    text-transform: uppercase;
+  }
+
+  .main-menu .navbar-collapse {
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: right;
+    border: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  
+  .main-menu .navbar-nav {
+    margin: 0;
+  }
+  
+  .main-menu .nav > li > a {
+    padding: 8px 5px;
+    margin: 0;
+  }
+
+  .main-menu .nav > li:last-child > a {
+    padding-right: 5px;
+  }
+
+  .main-menu .dropdown-menu {
+    margin-bottom: 12px;
+    text-align: right;
+  }
+
+  .main-menu .dropdown-menu a {
+    border-bottom: 0;
+  }
+
+  .main-menu .dropdown-menu > li > a {
+    color: #777;
+  }
+
+  .main-menu .navbar-nav .open .dropdown-menu > li > a,
+  .main-menu .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 6px 35px;
+  }
+
+  .main-menu .dropdown-menu > .active > a,
+  .main-menu .dropdown-menu > li > a:hover,
+  .main-menu .dropdown-menu > li > a:focus {
+    background-color: transparent;
+  }
+  
+}
+
+
+
+/*************************************************************/
+/************************ Highlighted ************************/
+/*************************************************************/
+
+.highlighted-image {
+  height: 500px;
+}
+
+
+
+/*************************************************************/
+/************************ Side Image *************************/
+/*************************************************************/
+
+.side-image {
+  position: absolute;
+  height: 100%;
+}
+
+.side-image-text {
+  padding: 100px 80px;
+}
+
+@media (max-width: 991px) {
+
+  .side-image {
+    position: relative;
+    height: 300px;
+  }
+
+}
+
+
+
+/*************************************************************/
+/*************************** Panels **************************/
+/*************************************************************/
+
+.panel-icon-inline {
+  position: absolute;
+  height: 48px;
+  font-size: 48px;
+}
+
+.panel-title-inline {
+  padding-left: 65px;
+  margin: 0;
+  line-height: 50px;
+}
+
+
+
+/*************************************************************/
+/************************* Portfolio *************************/
+/*************************************************************/
+
+/** Portfolio Block **/
+.portfolio-image {
+  position: relative;
+}
+
+.portfolio-title {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  margin-top: -15px;
+  opacity: 0;
+
+  -webkit-transition: opacity .3s ease-out;
+     -moz-transition: opacity .3s ease-out;
+       -o-transition: opacity .3s ease-out;
+          transition: opacity .3s ease-out;
+}
+
+.portfolio-image:hover .portfolio-title {
+  opacity: 1;
+}
+
+.portfolio-text {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0 10px;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-out;
+     -moz-transition: opacity .3s ease-out;
+       -o-transition: opacity .3s ease-out;
+          transition: opacity .3s ease-out;
+}
+
+.portfolio-image:hover .portfolio-text {
+  opacity: 1;
+}
+
+@media (max-width: 991px) {
+
+  .portfolio-slider .owl-buttons {
+    display: none;
+  }
+
+}
+
+
+
+/*************************************************************/
+/**************************** Blog ***************************/
+/*************************************************************/
+
+.blog-menu {
+  line-height: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.blog-post {
+  position: relative;
+}
+
+.blog-post-title {
+  position: absolute;
+  top: 45%;
+  right: 0;
+  left: 0;
+  margin-top: -10px;
+  text-align: center;
+  -webkit-transition: margin-top .3s ease-out;
+     -moz-transition: margin-top .3s ease-out;
+       -o-transition: margin-top .3s ease-out;
+          transition: margin-top .3s ease-out;
+}
+
+.blog-post:hover .blog-post-title {
+  margin-top: -20px;
+}
+
+.blog-post-title.latest-posts {
+  margin-top: 0;
+}
+
+.blog-post-more {
+  font-size: 0.85em;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-out;
+     -moz-transition: opacity .3s ease-out;
+       -o-transition: opacity .3s ease-out;
+          transition: opacity .3s ease-out;
+}
+
+.blog-post:hover .blog-post-more {
+  opacity: 1;
+}
+
+.blog-post-info {
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  left: 0; 
+  font-size: .85em;
+  font-style: italic;
+}
+
+.blog-2-post + .blog-2-post {
+  margin-top: 100px;
+}
+
+/** Blog Single **/
+.blog-single-title {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 30px 0;
+}
+
+.blog-single-info {
+  text-decoration: italic;
+  font-size: .85em;
+}
+
+.blog-single-info i {
+  padding: 0 10px 0 30px;
+}
+
+@media (max-width: 991px) {
+
+  .blog-single-title {
+    position: relative;
+    background-color: #333;
+  }
+
+}
+
+/** News Block **/
+.news-block-text {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+
+
+/*************************************************************/
+/************************** Comments *************************/
+/*************************************************************/
+
+.theme-comments {
+  margin-top: 100px;
+}
+
+.theme-comments-title {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.theme-comment {
+  margin-top: 80px;
+}
+
+.theme-comment-subject {
+  margin-bottom: 10px;
+}
+
+
+
+/*************************************************************/
+/************************* Pagination ************************/
+/*************************************************************/
+
+.pagination {
+  padding: 0;
+  margin: 100px 0 0;
+  list-style: none;
+}
+
+.pagination > li {
   display: inline-block;
-  font-family: 'bebas_neuebold';
-  font-size: 15px;
-  letter-spacing: 1px; }
+}
 
-@-moz-document url-prefix() {
-  /* line 571, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .btn,
-  .btn-submit {
-    padding: 10px 17px 10px; } }
-/* line 576, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.text-center .btn {
-  margin: 0 4px; }
+.pagination > li + li {
+  padding-left: 30px;
+}
 
-/* line 579, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn-large {
-  padding: 12px 21px; }
+.pagination > .active > a {
+  color: #444;
+}
 
-/* line 582, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn.btn-red {
-  background: #DC3E38; }
 
-/* line 585, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn.btn-pink {
-  background: #e767a1; }
 
-/* line 588, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn.btn-purple {
-  background: #8c6fdf; }
+/*************************************************************/
+/**************************** Team ***************************/
+/*************************************************************/
 
-/* line 591, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn.btn-blue {
-  background: #689cd2; }
+.team-image {
+  position: relative;
+  text-align: center;
+}
 
-/* line 594, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn.btn-green {
-  background: #65c4c4; }
+.team-info {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: opacity .25s ease-in-out;
+     -moz-transition: opacity .25s ease-in-out;
+          transition: opacity .25s ease-in-out;
+}
 
-/* line 597, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn.btn-gray {
-  background: #5d5d5d; }
+.team-image:hover .team-info {
+  opacity: 1;
+}
 
-/* line 600, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn.btn-brown {
-  background: #a17963; }
 
-/* line 603, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn.btn-yellow {
-  background: #ffcb17; }
 
-/* line 606, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn.btn-lime {
-  background: #b9d958; }
+/*************************************************************/
+/********************** Pricing Tables ***********************/
+/*************************************************************/
 
-/* line 609, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn:hover,
+.pricing-table {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 50px 20px;
+}
+
+.pricing-table .price {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+
+
+/*************************************************************/
+/************************ Testimonials ***********************/
+/*************************************************************/
+
+.testimonials .testimonials-icon {
+  margin-bottom: 20px;
+}
+
+.testimonials .testimonials-author {
+  margin-top: 15px;
+  color: #2b2b2b;
+}
+
+@media (max-width: 991px) {
+
+  .testimonials .testimonials-item + .testimonials-item {
+    margin-top: 40px;
+  }
+
+}
+
+
+
+/*************************************************************/
+/************************ Google Maps ************************/
+/*************************************************************/
+
+.google-map {
+  width: 100%;
+  height: 350px;
+}
+
+.google-map-full {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/*************************************************************/
+/**************************** Tabs ***************************/
+/*************************************************************/
+
+.nav-tabs {
+  margin-bottom: 20px;
+  border: 0;
+}
+
+.nav.nav-tabs > li > a {
+  padding: 7px 27px;
+}
+
+.nav-tabs > li > a {
+  margin-right: 10px;
+  color: #444;
+  border-radius: 0;
+}
+
+.nav-tabs > li > a:hover {
+  border-color: transparent;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  background-color: transparent;
+}
+
+.nav-tabs.nav-justified > li > a {
+  margin-right: 10px;
+  color: #444;
+  border-color: transparent;
+  border-radius: 0;
+}
+
+.nav-tabs.nav-justified > li:last-child > a {
+  margin-right: 0;
+}
+
+.nav-tabs.nav-justified > li > a:hover {
+  border-color: transparent;
+}
+
+@media (max-width: 767px) {
+
+  .nav-tabs.nav-justified > li > a {
+    margin-right: 0;
+  }
+
+}
+
+
+
+/*************************************************************/
+/************************* Accordions ************************/
+/*************************************************************/
+
+.panel + .panel {
+  margin-top: 10px;
+}
+
+.panel-heading {
+  padding: 10px 20px;
+  border: 2px solid #555;
+}
+
+.panel-body {
+  padding: 20px;
+}
+
+
+
+/*************************************************************/
+/************************** Buttons **************************/
+/*************************************************************/
+
+.btn {
+  padding: 10px 40px;
+  font-size: inherit;
+  font-weight: 300;
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: #fff;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 0;
+  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+          box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  color: #444;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn + .btn {
+  margin-left: 10px;
+}
+
 .btn:focus,
 .btn:active,
-.btn.active,
-.pagination ul > li > a:hover,
-.pagination ul > li > a:focus,
-.pagination ul > .active > a,
-.pagination ul > .active > span,
-.open > .dropdown-toggle.btn-default,
-footer ul.tag-list li a:hover {
-  background: #e05152;
-  color: #fff !important;
-  -webkit-transition: all 200ms ease-in;
-  -o-transition: all 200ms ease-in;
-  -moz-transition: all 200ms ease-in;
+.btn.active {
+  outline: 0;
+}
+
+.btn-lg {
+  padding: 20px 60px;
+  font-size: 1.3em;
+  line-height: inherit;
+}
+
+.btn-sm,
+.btn-xs {
+  padding: 10px 20px;
+  font-size: 0.8em;
+  line-height: normal;
+}
+
+.btn-xs {
+  padding: 5px 10px;
+}
+
+.btn-default {
+  color: #fff;
+  background-color: #444;
+  border-color: #444;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+  background-color: transparent;
+  border-color: #444;
+}
+
+.btn-inverse {
+  color: #444;
+  border-color: #444;
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none; }
+          box-shadow: none;
+}
 
-/* line 628, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn-red:hover,
-.btn-red:focus,
-.btn-red:active,
-.btn-red.active {
-  background: #e05152 !important; }
+.btn-inverse:hover,
+.btn-inverse:focus,
+.btn-inverse:active,
+.btn-inverse.active {
+  color: #fff;
+  background-color: #444;
+  border-color: #444;
+}
 
-/* line 634, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn-pink:hover,
-.btn-pink:focus,
-.btn-pink:active,
-.btn-pink.active {
-  background: #da5e96 !important; }
 
-/* line 640, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn-purple:hover,
-.btn-purple:focus,
-.btn-purple:active,
-.btn-purple.active {
-  background: #8266d1 !important; }
+/*************************************************************/
+/*************************** Alerts **************************/
+/*************************************************************/
 
-/* line 646, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn-blue:hover,
-.btn-blue:focus,
-.btn-blue:active,
-.btn-blue.active {
-  background: #5d90c5 !important; }
+.alert:last-child {
+  margin-bottom: 0;
+}
 
-/* line 652, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn-green:hover,
-.btn-green:focus,
-.btn-green:active,
-.btn-green.active {
-  background: #5bb8b8 !important; }
 
-/* line 658, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn-gray:hover,
-.btn-gray:focus,
-.btn-gray:active,
-.btn-gray.active {
-  background: #4f4f4f !important; }
 
-/* line 664, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn-brown:hover,
-.btn-brown:focus,
-.btn-brown:active,
-.btn-brown.active {
-  background: #8d6d5c !important; }
+/*************************************************************/
+/*********************** Progress Bars ***********************/
+/*************************************************************/
 
-/* line 670, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn-yellow:hover,
-.btn-yellow:focus,
-.btn-yellow:active,
-.btn-yellow.active {
-  background: #f7c108 !important; }
+.progress {
+  height: 20px;
+  background-color: #fff;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+          box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+}
 
-/* line 676, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn-lime:hover,
-.btn-lime:focus,
-.btn-lime:active,
-.btn-lime.active {
-  background: #adcb53 !important; }
+.progress:last-child {
+  margin-bottom: 0;
+}
 
-/* line 682, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn.fixed-width {
-  width: 155px; }
+.progress-title {
+  margin-bottom: 5px;
+}
 
-/* line 685, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn i {
-  margin-right: 5px; }
+.progress-bar {
+  padding: 0 10px;
+  font-size: 0.85em;
+  line-height: 20px;
+  text-align: left;
+  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+          box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+}
 
-/* line 688, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social-dropdown .btn i {
-  margin: 0; }
 
-/* line 691, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.share.btn {
-  padding: 10px 13px !important;
-  background: #337ab7;
-  margin-top: -10px; }
 
-/* line 696, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.share.btn:hover {
-  background: #004784; }
+/*************************************************************/
+/*************************** Forms ***************************/
+/*************************************************************/
 
-/* line 699, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.share.btn a {
-  color: white; }
+.form-group {
+  margin-bottom: 20px;
+}
 
-/* line 702, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.share.btn.dropdown-toggle {
-  margin-bottom: 0; }
+.form-group:last-child {
+  margin-bottom: 0;
+}
 
-/* line 705, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.share-links {
-  padding: 0 !important;
-  margin-top: 10px !important;
-  list-style: none;
-  min-width: 0 !important;
-  width: auto !important; }
-
-/* line 712, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.share-links li {
-  cursor: pointer;
-  display: block;
-  border: 0 !important;
-  line-height: normal !important; }
-
-/* line 718, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.share-links li a {
-  padding: 0 !important;
-  display: block;
-  line-height: normal !important;
-  margin: 0 !important; }
-
-/* line 724, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.share-links li a i {
-  padding: 12px 13px 12px 14px !important;
-  line-height: normal !important;
-  display: block;
-  -webkit-transition: all 200ms ease-in;
-  -o-transition: all 200ms ease-in;
-  -moz-transition: all 200ms ease-in; }
-
-/* line 732, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.share-links .icon-s-facebook,
-.click-share .share-facebook {
-  background: #4470cf; }
-
-/* line 736, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.share-links .icon-s-facebook:hover,
-.click-share .share-facebook:hover {
-  background-color: #4066b9; }
-
-/* line 740, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.share-links .icon-s-twitter,
-.click-share .share-twitter {
-  background: #5daed5; }
-
-/* line 744, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.share-links .icon-s-twitter:hover,
-.click-share .share-twitter:hover {
-  background-color: #569cbe; }
-
-/* line 748, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.share-links .icon-s-pinterest,
-.click-share .share-pinterest {
-  background: #c53942; }
-
-/* line 752, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.share-links .icon-s-pinterest:hover,
-.click-share .share-pinterest:hover {
-  background-color: #b0363e; }
-
-/* line 756, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.click-share {
-  margin-top: 15px; }
-
-/* line 759, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.click-share ul {
-  padding: 0;
-  margin: 0;
-  list-style: none; }
-
-/* line 764, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.click-share ul li {
-  cursor: pointer;
-  display: inline;
-  padding: 0 1px; }
-
-/* line 769, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.click-share ul li .btn {
-  margin: 0; }
-
-/*-----------------------------------------------------------------------------------*/
-/*	03. HEADER
-/*-----------------------------------------------------------------------------------*/
-/* line 775, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar-header {
-  float: none !important; }
-
-/* line 778, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar .container {
-  padding: 0; }
-
-/* line 781, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar {
-  margin: 0;
-  border-radius: 0;
-  border: none;
-  position: fixed;
-  z-index: 8000;
-  min-height: inherit;
-  width: 100%;
-  background: none; }
-
-/* line 791, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar-brand {
-  padding: 48px 0 0 0; }
-
-/* line 794, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar-brand img {
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  -webkit-transform: translateZ();
-  image-rendering: -webkit-optimize-contrast;
-  margin-top: -10px;
-  height: 45px;
-  width: inherit; }
-
-/* line 806, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar-collapse {
-  width: auto;
-  padding: 0;
-  border: none;
+select.form-control,
+.form-control {
   background: transparent;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none; }
-
-/* line 815, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar-nav {
-  margin: 70px 0 50px; }
-
-/* line 818, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar-nav > li {
-  margin-left: 45px; }
-
-/* line 821, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar-nav > li > a {
-  font-family: 'bebas_neuebold';
-  font-size: 15px;
-  font-weight: normal;
-  color: #4d4d4d;
-  padding: 0;
-  letter-spacing: 1.5px;
-  position: relative; }
-
-/* line 830, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.nav > li > a:focus {
-  background: none;
-  color: #f5f5f5; }
-
-/* line 834, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.nav > li > a:hover {
-  background: none;
-  color: #DC3E38; }
-
-/* line 838, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.nav > li.current > a {
-  background: none;
-  color: #DC3E38; }
-
-/* line 842, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar .dropdown-menu {
-  padding: 0;
-  margin: 0;
-  min-width: 150px;
-  border: none;
-  background: none;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
+  border: 2px solid rgba(0,0,0,.1);
   border-radius: 0;
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  padding-top: 10px; }
+          box-shadow: none;
+  -webkit-transition: all ease-in-out 0.3s;
+          transition: all ease-in-out 0.3s;
+}
 
-/* line 856, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar .dropdown-menu:before {
-  content: "";
-  width: 0;
-  display: block;
-  position: absolute;
-  height: 10px;
-  top: 0;
-  left: 10px;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid #38393b; }
-
-/* line 868, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar .dropdown-menu.dropdown-menu-right:before {
-  right: 15px !important;
-  left: auto; }
-
-/* line 872, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar .dropdown-menu.share-links.dropdown-menu-right:before {
-  left: 50% !important;
-  margin-left: -5px;
-  border-bottom: 5px solid #4470cf; }
-
-/* line 877, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar .dropdown-menu li {
-  background: #38393b;
-  border: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.15); }
-
-/* line 882, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar .dropdown-menu li:first-child {
-  border: none; }
-
-/* line 885, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar .dropdown-menu li a {
-  background: none;
-  border: none;
-  color: #FFF;
-  padding: 14px 20px 12px;
-  font-family: 'bebas_neuebold';
-  font-size: 14px;
-  letter-spacing: 1px;
-  line-height: 1; }
-
-/* line 895, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar .dropdown-menu li a:hover,
-.navbar .dropdown-menu li a.active {
-  padding: 14px 20px 12px;
-  filter: none;
-  line-height: 1;
-  color: #DC3E38; }
-
-/* line 902, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar .nav .open > a,
-.navbar .nav .open > a:hover,
-.navbar .nav .open > a:focus {
-  background: none;
-  color: #DC3E38; }
-
-/* line 908, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar .nav > li > .dropdown-menu:after {
-  display: none; }
-
-/* line 911, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar .dropdown-menu > li > a:hover,
-.navbar .dropdown-menu > li > a:focus,
-.navbar .dropdown-submenu:hover > a,
-.navbar .dropdown-submenu:focus > a,
-.navbar .dropdown-menu > .active > a,
-.navbar .dropdown-menu > .active > a:hover,
-.navbar .dropdown-menu > .active > a:focus {
-  background: none;
-  color: #DC3E38;
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); }
-
-/* line 922, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn.responsive-menu {
-  padding: 7px 12px;
-  margin: 0;
-  display: none;
-  font-size: 15px; }
-
-/* line 928, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn.responsive-menu i {
-  margin: 0; }
-
-/* line 931, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn.responsive-menu i:before {
-  content: '\f0c9';
-  font-family: 'fontello';
-  display: block;
-  font-style: normal;
-  font-weight: normal;
-  width: 1em;
-  margin-right: 0;
-  text-align: center; }
-
-/* line 941, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn.responsive-menu.opn i:before {
-  content: ""; }
-
-/*-----------------------------------------------------------------------------------*/
-/*	04. FIXED MENU
-/*-----------------------------------------------------------------------------------*/
-/* line 947, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.offset {
-  display: block;
-  padding-top: 141px; }
-
-/* line 951, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar.default {
-  width: 100%;
-  position: absolute; }
-
-/* line 955, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar.fixed {
-  position: fixed;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.93);
-  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1); }
-
-/* line 965, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar.fixed .navbar-nav {
-  margin: 20px 0 10px; }
-
-/* line 968, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar.fixed .navbar-brand {
-  padding: 14px 0 0 0; }
-
-/* line 971, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.navbar.fixed .navbar-brand img {
-  margin-top: -10px;
-  height: 50px;
-  width: auto; }
-
-/*-----------------------------------------------------------------------------------*/
-/*	05. ISOTOPE PORTFOLIO GRID
-/*-----------------------------------------------------------------------------------*/
-/* line 979, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.full-portfolio {
-  overflow: hidden; }
-
-/* line 982, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.classic-masonry .isotope {
-  margin-bottom: -10px;
-  margin-right: -10px; }
-
-/* line 986, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.full-portfolio .isotope {
-  margin-right: -5px; }
-
-/* line 989, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.full-portfolio .isotope .item,
-.full-portfolio .isotope .grid-sizer {
-  width: 20%;
-  padding: 0 6px 6px 0; }
-
-/* line 994, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.isotope:after {
-  content: '';
-  display: block;
-  clear: both; }
-
-/* line 999, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.isotope .item {
-  float: left; }
-
-/* line 1002, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.classic-masonry .isotope .item {
-  width: 25%;
-  height: auto;
-  padding: 0 10px 10px 0; }
-
-/* line 1007, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.classic-masonry .isotope .details {
-  padding: 18px 20px 20px 20px;
-  background: #f5f5f5;
-  text-align: center; }
-
-/* line 1012, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.classic-masonry .isotope .details .meta {
-  margin-bottom: 0;
-  font-size: 16px; }
-
-/* line 1016, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.classic-masonry .isotope .details .post-title {
-  margin-bottom: 0; }
-
-/* line 1019, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.classic-masonry figure img {
-  width: 100%; }
-
-/* line 1022, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.pull-right .btn {
-  margin-right: 0; }
-
-/* line 1025, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn.dropdown-toggle {
-  margin-bottom: 0;
-  margin-top: -10px; }
-
-/* line 1029, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.button-group.dropdown-menu {
-  padding: 0;
-  margin: 0;
-  margin-top: 10px;
-  font-size: 15px;
-  background-color: #38393b;
-  border-bottom: 0;
-  border-radius: 0;
+.form-control:focus {
+  border-color: rgba(0,0,0,.2);
+  outline: 0;
   -webkit-box-shadow: none;
-  box-shadow: none;
-  border: 0; }
+          box-shadow: none;
+}
 
-/* line 1041, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.button-group.dropdown-menu:before {
-  content: "";
-  width: 0;
-  display: block;
-  position: absolute;
-  height: 10px;
-  top: -10px;
-  right: 15px;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid #38393b; }
-
-/* line 1053, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.button-group.dropdown-menu button {
-  background: none;
-  border: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
-  display: block;
-  color: #FFF;
-  padding: 7px 20px;
-  font-family: 'bebas_neuebold';
-  font-size: 14px;
-  letter-spacing: 1px;
-  width: 100%;
-  text-align: left; }
-
-/* line 1066, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.button-group.dropdown-menu button.is-checked {
-  color: #DC3E38; }
-
-/* line 1069, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.button-group.dropdown-menu button {
-  -webkit-transition: all 200ms ease-in;
-  -o-transition: all 200ms ease-in;
-  -moz-transition: all 200ms ease-in; }
-
-/* line 1074, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.button-group.dropdown-menu button:hover {
-  color: #DC3E38 !important; }
-
-/* line 1077, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.button-group.dropdown-menu button:first-child {
-  border: none; }
-
-/* line 1080, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.item-details {
-  padding: 0;
-  margin: 0;
-  list-style: none; }
-
-/* line 1085, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.item-details li {
-  margin-bottom: 15px; }
-
-/* line 1088, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.item-details li h4 {
-  margin-bottom: 0; }
-
-/* line 1091, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.primary figure img {
-  width: 100%; }
-
-/*-----------------------------------------------------------------------------------*/
-/*	06. OVERLAY
-/*-----------------------------------------------------------------------------------*/
-/* line 1097, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-figure {
-  display: block;
-  overflow: hidden;
-  position: relative; }
-
-/* line 1102, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.items li figure img {
-  display: block;
-  width: 100%; }
-
-/* line 1106, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-figure li a,
-figure li a img {
-  display: block;
-  overflow: hidden;
-  position: relative; }
-
-/* line 1112, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-figure img {
-  display: inline;
-  max-width: 100%;
-  -webkit-backface-visibility: hidden; }
-
-/* line 1117, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-figure a .text-overlay {
-  opacity: 0;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  -MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  height: 100%;
-  position: absolute;
-  text-decoration: none;
-  width: 100%;
-  z-index: 100;
-  padding: 50px;
-  background: #222;
-  background: rgba(239, 95, 96, 0.96);
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s; }
-
-/* line 1134, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-figure a:hover .text-overlay {
-  opacity: 1;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  -MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
-
-/* line 1139, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-figure a .text-overlay .info {
-  text-align: center;
-  top: 50%;
-  width: 100%;
-  left: 0;
-  position: absolute;
-  margin-top: -12px; }
-
-/* line 1147, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-figure a .text-overlay .info span {
-  padding: 12px 21px;
-  font-family: 'bebas_neuebold';
-  font-size: 17px;
-  letter-spacing: 1px;
-  color: #FFF; }
-
-/* line 1154, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.icon-overlay {
-  display: block;
-  overflow: hidden;
-  position: relative; }
-
-/* line 1159, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.icon-overlay img {
-  display: block;
-  max-width: 100%;
-  -webkit-backface-visibility: hidden; }
-
-/* line 1164, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.icon-overlay a .icn-more {
-  opacity: 0;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  -MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  height: 100%;
-  position: absolute;
-  text-decoration: none;
-  width: 100%;
-  max-width: 100%;
-  z-index: 100;
-  background: #222;
-  background: rgba(239, 95, 96, 0.96);
-  overflow: hidden;
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s; }
-
-/* line 1182, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.icon-overlay a:hover .icn-more {
-  opacity: 1;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  -MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
-
-/* line 1187, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.icon-overlay a .icn-more:before {
-  font-family: 'fontello';
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  display: inline-block;
-  text-decoration: inherit;
-  position: absolute;
-  text-align: center;
-  content: '\f517';
-  line-height: 1;
-  color: #FFF;
-  top: 50%;
-  left: 50%;
-  z-index: 2;
-  padding: 8px 10px;
-  font-size: 16px;
-  top: 50%;
-  margin: -17px 0 0 -17px; }
-
-/* line 1207, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.icon-overlay.icn-enlarge a .icn-more:before {
-  content: ""; }
-
-/*-----------------------------------------------------------------------------------*/
-/*	07. SLIDER PRO
-/*-----------------------------------------------------------------------------------*/
-/* line 1213, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sp-arrow {
-  font-family: 'fontello' !important;
-  text-shadow: none;
-  color: #595959;
-  width: 40px;
-  height: 40px;
-  font-weight: 500;
-  line-height: 40px;
-  font-size: 20px;
-  background: #FFF;
-  text-align: center;
-  -webkit-transition: all 200ms ease-in;
-  -o-transition: all 200ms ease-in;
-  -moz-transition: all 200ms ease-in; }
-
-/* line 1228, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sp-arrow:hover {
-  background: #DC3E38;
-  color: #FFF; }
-
-/* line 1232, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sp-previous-arrow:before {
-  content: "" !important; }
-
-/* line 1235, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sp-next-arrow:before {
-  content: "" !important; }
-
-/* line 1238, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sp-button {
-  width: 12px;
-  height: 12px;
-  background: #e1e5e6;
-  border: none;
-  margin: 2px;
-  border-radius: 0;
-  -webkit-transition: all 200ms ease-in;
-  -o-transition: all 200ms ease-in;
-  -moz-transition: all 200ms ease-in; }
-
-/* line 1249, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sp-button:hover,
-.sp-selected-button {
-  background: #DC3E38; }
-
-/* line 1253, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sp-selected-thumbnail {
-  border-bottom: 3px solid #DC3E38; }
-
-/* line 1256, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sp-grab {
-  cursor: url(style/images/openhand.cur), move; }
-
-/* line 1259, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sp-grabbing {
-  cursor: url(style/images/closedhand.cur), move; }
-
-/* line 1262, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sp-thumbnails {
-  margin-top: 6px; }
-
-/* line 1265, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sp-top-thumbnails .sp-thumbnail-container,
-.sp-bottom-thumbnails .sp-thumbnail-container {
-  margin-left: 3px;
-  margin-right: 3px; }
-
-/* line 1270, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sp-white {
-  background: white; }
-
-/* line 1273, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.slider-pro h4 {
-  color: #4d4d4d; }
-
-/* line 1276, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.slider-pro p {
-  color: #707070; }
-
-/* line 1279, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.blog-slider {
-  margin-top: 20px !important;
-  margin-bottom: 10px !important; }
-
-/*-----------------------------------------------------------------------------------*/
-/*	08. BASIC GALLERY
-/*-----------------------------------------------------------------------------------*/
-/* line 1286, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.basic-gallery {
-  display: block;
-  padding: 0;
-  margin: 0;
-  width: 100%; }
-
-/* line 1292, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.basic-gallery li {
-  display: block;
-  width: 100%;
-  margin-top: 50px; }
-
-/* line 1297, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.basic-gallery li:first-child {
-  margin-top: 0; }
-
-/* line 1300, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.basic-gallery li img {
-  display: inline;
-  max-width: 100%;
-  height: auto; }
-
-/*-----------------------------------------------------------------------------------*/
-/*	09. SERVICES
-/*-----------------------------------------------------------------------------------*/
-/* line 1308, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.services-1 .col-wrapper {
-  padding: 0 10px; }
-
-/* line 1311, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.icon-wrapper {
-  background: #eeeeee;
-  margin: 0 auto 35px;
-  display: table;
-  position: relative;
-  width: 110px;
-  height: 110px;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  -webkit-transition: all 200ms ease-in;
-  -o-transition: all 200ms ease-in;
-  -moz-transition: all 200ms ease-in; }
-
-/* line 1324, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.icon-wrapper .icon {
-  text-align: center;
-  display: table-cell;
-  vertical-align: middle;
-  width: auto; }
-
-/* line 1330, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.services-1 .col-wrapper:hover .icon-wrapper {
-  background: #e7e7e7; }
-
-/*-----------------------------------------------------------------------------------*/
-/*	10. BLOG
-/*-----------------------------------------------------------------------------------*/
-/* line 1336, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.latest-blog-wrapper {
-  overflow: hidden; }
-
-/* line 1339, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.latest-blog .post {
-  float: left;
-  margin-bottom: 50px; }
-
-/* line 1343, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.latest-blog .image-wrapper {
-  width: 180px;
-  float: left; }
-
-/* line 1347, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.latest-blog .post-content {
-  overflow: hidden; }
-
-/* line 1350, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.latest-blog .post p {
-  margin: 0; }
-
-/* line 1353, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.post:after {
-  content: '';
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden; }
-
-/* line 1360, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-figure.main {
-  margin-top: 20px;
-  margin-bottom: 20px; }
-
-/* line 1364, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.grid-view figure.main {
-  margin-top: 0; }
-
-/* line 1367, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.grid-view .post {
-  margin-bottom: 65px; }
-
-/* line 1370, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-figure.main img {
-  width: 100%; }
-
-/* line 1373, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.single figure {
-  margin-bottom: 20px; }
-
-/* line 1376, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.meta {
-  font-size: 17px;
-  font-family: 'bebas_neue_regularregular';
-  letter-spacing: 1px;
-  color: #9f9f9f;
-  font-weight: normal;
-  margin-bottom: 10px; }
-
-/* line 1384, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.meta a {
-  color: #9f9f9f; }
-
-/* line 1387, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.meta a:hover {
-  color: #DC3E38; }
-
-/* line 1390, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.meta span {
-  position: relative;
-  margin: 0 7px 0 0; }
-
-/* line 1394, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.meta span:before {
-  display: inline-block;
-  content: "/";
-  padding-right: 7px; }
-
-/* line 1399, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.meta span:first-child:before {
-  display: none; }
-
-/* line 1402, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.post-list .meta span:first-child:before {
-  display: inline-block; }
-
-/* line 1405, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.meta.tags a:before {
-  content: "#";
-  display: inline-block; }
-
-/* line 1409, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.classic-blog .post,
-.col-blog .post {
-  margin-bottom: 90px; }
-
-/* line 1413, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.format-chat ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 15px 0; }
-
-/* line 1418, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.format-chat ul li {
-  margin-bottom: 5px; }
-
-/* line 1421, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.format-chat ul li strong {
-  font-family: 'bebas_neuebold';
-  color: #4d4d4d;
-  font-weight: normal;
-  letter-spacing: 1px;
-  font-size: 17px; }
-
-/* line 1428, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.format-link .post-title a:after {
-  display: inline-block;
-  content: "→";
-  padding-left: 10px; }
-
-/* line 1433, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sidebar {
-  padding-left: 45px !important; }
-
-/* line 1436, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sidebar.left-sidebar {
-  padding: 15px !important;
-  padding-top: 0 !important; }
-
-/* line 1440, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sidebox {
-  margin-top: 60px;
-  display: block; }
-
-/* line 1444, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sidebox:first-child {
-  margin: 0; }
-
-/* line 1447, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sidebox .section-title {
-  font-size: 18px;
-  letter-spacing: 1px; }
-
-/* line 1451, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.widget .post-list {
-  padding: 0;
-  margin: 0; }
-
-/* line 1455, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.widget .post-list:after {
-  content: '';
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden; }
-
-/* line 1462, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.widget .post-list li {
-  clear: both;
-  margin-bottom: 15px;
-  display: block;
-  overflow: hidden; }
-
-/* line 1468, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.widget .post-list h5 {
-  margin: 0;
-  font-family: 'bebas_neuebold' !important;
-  color: #4d4d4d;
-  font-weight: normal;
-  letter-spacing: 1px;
-  font-size: 16px; }
-
-/* line 1476, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sidebox .post-list h5 a {
-  color: #4d4d4d; }
-
-/* line 1479, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sidebox a {
-  color: #707070; }
-
-/* line 1482, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sidebox a:hover {
-  color: #DC3E38 !important; }
-
-/* line 1485, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.widget .post-list .icon-overlay {
-  float: left;
-  width: 70px;
-  height: 70px; }
-
-/* line 1490, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.widget .post-list .icon-overlay a .icn-more:before {
-  border: 0; }
-
-/* line 1493, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.widget .post-list .meta {
-  margin-left: 85px;
-  margin-bottom: 0; }
-
-/* line 1497, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.widget .post-list .meta em {
-  font-size: 16px;
-  font-family: 'bebas_neue_regularregular';
-  letter-spacing: 1px;
-  color: #9f9f9f;
-  font-weight: normal;
-  margin-bottom: 10px;
-  font-style: normal; }
-
-/* line 1506, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.widget .post-list .meta em a {
-  color: #9f9f9f; }
-
-/* line 1509, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.widget .post-list .meta em:before {
-  display: none; }
-
-/* line 1512, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sidebox.widget form {
-  margin: 0; }
-
-/* line 1515, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.sidebox.widget .searchform input {
-  margin: 0; }
-
-/* line 1518, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.widget .list {
-  list-style: none;
-  margin: 0; }
-
-/* line 1522, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-ul.tag-list {
-  padding: 0;
-  margin: 0;
-  list-style: none; }
-
-/* line 1527, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-ul.tag-list li {
-  padding: 0;
-  margin: 0;
-  display: inline-block;
-  margin-right: 2px;
-  margin-bottom: 6px;
-  background: none; }
-
-/* line 1535, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-ul.tag-list li a {
-  padding: 0;
-  margin: 0;
-  color: #4d4d4d;
-  background: #eeeeee;
-  display: inline-block;
-  padding: 10px 17px 10px;
-  font-family: 'bebas_neuebold';
-  font-size: 15px;
-  letter-spacing: 1px; }
-
-/* line 1546, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-ul.tag-list li a:hover {
-  background: #DC3E38;
-  color: #FFF !important;
-  text-decoration: none; }
-
-/* line 1551, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.pagination {
-  display: block;
-  margin: 0; }
-
-/* line 1555, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.pagination ul {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  list-style: none;
-  padding: 0;
-  margin: 0; }
-
-/* line 1563, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.pagination ul > li {
-  display: inline-block; }
-
-/* line 1566, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.pagination ul > li > a,
-.pagination ul > li > span {
-  float: none;
-  padding: 10px 17px 11px;
-  margin-right: 2px; }
-
-/* line 1572, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.pagination ul > .active > a span {
-  border-bottom: 1px solid #FFF;
-  padding-bottom: 1px; }
-
-/*-----------------------------------------------------------------------------------*/
-/*	11. AUTHOR
-/*-----------------------------------------------------------------------------------*/
-/* line 1589, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.about-author {
-  padding: 30px; }
-
-/* line 1592, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.about-author .author-image {
-  width: 120px;
-  float: left;
-  margin-right: 20px;
-  display: block; }
-
-/* line 1598, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.about-author .author-details {
-  overflow: hidden; }
-
-/* line 1601, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.about-author .author-details .social {
-  margin: 0;
-  padding: 0;
-  overflow: hidden; }
-
-/*-----------------------------------------------------------------------------------*/
-/*	12. COMMENTS
-/*-----------------------------------------------------------------------------------*/
-/* line 1609, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-#comments {
-  margin: 0;
-  position: relative; }
-
-/* line 1613, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-#comments ol.commentlist {
-  list-style: none;
-  padding: 0; }
-
-/* line 1620, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.comment-wrapper {
-  background: #eeeeee;
-  padding: 30px 30px 15px 30px;
-  margin-bottom: 20px; }
-
-/* line 1625, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-#comments .user {
-  float: left;
-  width: 70px;
-  height: 70px;
-  position: relative; }
-
-/* line 1631, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-#comments .message {
-  overflow: hidden; }
-
-/* line 1634, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-#comments .arrow-box {
-  margin-left: 20px;
-  position: relative; }
-
-/* line 1638, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-#comments ul.children {
-  margin: 0;
-  overflow: inherit;
-  padding: 0 0 0 55px;
-  list-style: none; }
-
-/* line 1644, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-#comments ol.commentlist ul.children li {
-  padding-right: 0; }
-
-/* line 1647, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-#comments .info h2 {
-  font-size: 18px;
-  margin: 0;
-  display: inline;
-  margin-right: 5px; }
-
-/* line 1653, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-#comments .info {
-  margin-bottom: 14px; }
-
-/* line 1656, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-#comments .info h2 a {
-  color: #4d4d4d; }
-
-/* line 1659, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-#comments .info h2 a:hover {
-  color: #DC3E38; }
-
-/* line 1662, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-#comments .info .meta {
-  display: block;
-  margin: 0; }
-
-/* line 1666, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-#comments .info .meta .date {
-  display: inline; }
-
-/* line 1669, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-#comments a.reply-link {
-  display: inline;
-  color: #9f9f9f; }
-
-/* line 1673, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-#comments a.reply-link:hover {
-  color: #DC3E38; }
-
-/* line 1676, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.comment-form-wrapper p {
-  padding-bottom: 20px; }
-
-/*-----------------------------------------------------------------------------------*/
-/*	13. FORMS
-/*-----------------------------------------------------------------------------------*/
-/* line 1682, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.forms {
-  position: relative;
-  padding: 0;
-  width: 100%; }
-
-/* line 1687, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.form-container .response {
-  display: none; }
-
-/* line 1690, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.form-container .row {
-  margin-right: -8px;
-  margin-left: -8px; }
-
-/* line 1694, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.form-container [class*="col-"] {
-  padding-right: 8px;
-  padding-left: 8px; }
-
-/* line 1698, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.forms ol {
-  margin: 0;
-  padding: 0; }
-
-/* line 1702, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.forms ol li {
-  line-height: auto;
-  list-style: none;
-  position: relative; }
-
-/* line 1707, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.forms li.hidden-row {
-  display: none; }
-
-/* line 1710, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-input,
-textarea,
-.uneditable-input {
-  width: 100%; }
-
-/* line 1715, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-select,
 textarea,
 input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
 input[type="email"],
 input[type="url"],
 input[type="search"],
+input[type="password"],
 input[type="tel"],
-input[type="color"],
-.uneditable-input {
-  display: inline-block;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  height: 42px;
-  padding: 0 10px 0 40px;
-  margin-bottom: 16px;
-  font-size: 15px;
-  line-height: 26px;
-  color: #a3a3a3;
-  border: 0;
-  resize: none;
-  vertical-align: middle;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  background: #eeeeee;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  -webkit-transition: all 200ms ease-in;
-  -o-transition: all 200ms ease-in;
-  -moz-transition: all 200ms ease-in; }
+input[type="number"] {
+  -webkit-appearance: none;
+}
 
-/* line 1754, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-textarea:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="week"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus,
-.uneditable-input:focus {
-  border: 0;
-  background: #e7e7e7;
-  color: #707070;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none; }
 
-/* line 1777, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-textarea {
-  height: 100%;
-  padding: 5px 10px;
-  margin-bottom: 16px;
-  min-height: 150px;
-  resize: vertical; }
 
-/* line 1784, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.btn-submit {
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  width: auto; }
+/*************************************************************/
+/******************** Colors & Backgrounds *******************/
+/*************************************************************/
 
-/* line 1789, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.forms li.error input,
-.forms li.error textarea {
-  background: #eea5a5; }
-
-/* line 1793, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.forms span.error {
-  display: none; }
-
-/* line 1796, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.forms .button-row span.error {
-  padding: 0;
-  display: none; }
-
-/* line 1800, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.forms .button-row p.forgot {
-  padding: 6px 0 0 10px;
-  overflow: hidden;
-  display: inline-block; }
-
-/* line 1805, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.searchform,
-.comment-form div {
-  position: relative; }
-
-/* line 1809, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.forms label {
-  position: absolute;
-  top: 7px;
-  left: 22px;
-  color: #a3a3a3;
-  font-weight: normal; }
-
-/* line 1816, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.searchform label,
-.comment-form div label {
-  position: absolute;
-  top: 7px;
-  left: 13px;
-  color: #a3a3a3;
-  font-weight: normal; }
-
-/* line 1824, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.form-container:after {
-  content: '';
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden; }
-
-/* line 1831, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.searchform .btn {
-  position: absolute;
-  top: 0;
-  right: -5px;
-  height: 42px !important;
-  font-weight: normal !important;
-  font-size: 16px !important;
-  padding: 0 15px !important; }
-
-/*-----------------------------------------------------------------------------------*/
-/*	 14. TOOLTIP
-/*-----------------------------------------------------------------------------------*/
-/* line 1843, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tooltip {
-  font-size: 14px; }
-
-/* line 1846, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tooltip-inner {
+/** Text Color Palette **/
+.text-color-light,
+.text-color-light p,
+.text-color-light h1,
+.text-color-light h2,
+.text-color-light h3,
+.text-color-light h4,
+.text-color-light h5,
+.text-color-light h6,
+.text-color-light a:hover,
+.text-color-light a:focus,
+.text-color-light a:active {
   color: #fff;
-  background-color: #DC3E38;
-  padding: 5px 12px 5px; }
+}
 
-/* line 1851, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tooltip.top .tooltip-arrow,
-.tooltip.top-left .tooltip-arrow,
-.tooltip.top-right .tooltip-arrow {
-  border-top-color: #DC3E38; }
-
-/* line 1856, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tooltip.right .tooltip-arrow {
-  border-right-color: #DC3E38; }
-
-/* line 1859, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tooltip.left .tooltip-arrow {
-  border-left-color: #DC3E38; }
-
-/* line 1862, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tooltip.bottom .tooltip-arrow,
-.tooltip.bottom-left .tooltip-arrow,
-.tooltip.bottom-right .tooltip-arrow {
-  border-bottom-color: #DC3E38; }
-
-/*-----------------------------------------------------------------------------------*/
-/*	15. TABS
-/*-----------------------------------------------------------------------------------*/
-/* line 1870, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tabs-top .etabs {
-  margin: 0 0 -6px 0;
-  padding: 0;
-  overflow: inherit; }
-
-/* line 1875, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tabs-top .tab {
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-  margin-right: 3px;
-  margin-bottom: 6px; }
-
-/* line 1884, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tabs-top .tab a {
-  padding: 10px 15px 10px;
-  display: block;
-  border: none;
-  font-family: 'bebas_neuebold';
-  margin-top: 0;
-  color: #4d4d4d;
-  background: #eeeeee;
-  font-weight: normal;
-  font-size: 16px;
-  letter-spacing: 1px; }
-
-/* line 1896, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tabs-top .tab a:hover,
-.tabs-top .tab.active a {
+.text-color-light .btn:hover {
   color: #fff;
-  background: #DC3E38; }
+  border-color: #fff;
+}
 
-/* line 1901, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tabs-top.tab-container .panel-container {
-  position: relative;
-  z-index: 1;
-  display: block; }
+.text-color-light .btn-default {
+  color: #444;
+  background-color: #fff;
+  border-color: #fff;
+}
 
-/* line 1909, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tabs-top.tab-container .panel-container .tab-block {
-  padding-top: 20px; }
+.text-color-light .btn-default:hover {
+  color: #fff;
+  background-color: transparent;
+}
 
-/*-----------------------------------------------------------------------------------*/
-/*	16. ACCORDION / TOGGLE
-/*-----------------------------------------------------------------------------------*/
-/* line 1915, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.panel-group .panel {
-  margin-bottom: 10px;
-  background: none;
-  border: none;
-  border-radius: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  padding-bottom: 1px; }
+.text-color-light .btn-inverse {
+  color: #fff;
+  border-color: #fff;
+}
 
-/* line 1924, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.panel-heading {
-  padding: 0;
-  background: none !important;
-  border: 0 !important; }
+.text-color-light .btn-inverse:hover {
+  color: #444;
+  background-color: #fff;
+}
 
-/* line 1929, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.panel-heading .panel-title {
-  font-family: 'bebas_neuebold';
-  margin-top: 0;
-  color: #4d4d4d;
-  background: #eeeeee;
-  font-weight: normal;
-  font-size: 16px;
-  letter-spacing: 1px; }
+/** Background Colors **/
+.bg-color-grayDark1    { background-color: #333; }
+.bg-color-grayDark2    { background-color: #444; }
+.bg-color-grayLight1   { background-color: #f6f6f6; }
+.bg-color-grayLight2   { background-color: #eeeeee; }
+.bg-color-grayLight3   { background-color: #e0e0e0; }
 
-/* line 1938, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.panel-title > a {
-  display: block;
-  color: #4d4d4d;
-  padding: 11px 15px 11px; }
-
-/* line 1943, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.panel-title > a:hover,
-.panel-active a {
-  background: #DC3E38;
-  color: #FFF; }
-
-/* line 1948, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.panel-default > .panel-heading + .panel-collapse .panel-body {
-  border: 0;
-  padding: 20px 0 5px 0; }
-
-/* line 1952, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.panel-default > .panel-heading + .panel-collapse {
-  background: #FFF; }
-
-/*-----------------------------------------------------------------------------------*/
-/*	17. PROGRESS BAR
-/*-----------------------------------------------------------------------------------*/
-/* line 1958, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.progress-list {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-/* line 1963, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.progress-list p {
-  margin-bottom: 5px; }
-
-/* line 1966, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.progress-list li {
-  margin-bottom: 20px; }
-
-/* line 1969, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.progress-list li em {
-  padding-left: 8px;
-  color: #DC3E38;
-  font-style: normal; }
-
-/* line 1974, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.progress-list li em:before {
-  content: "-";
-  padding-right: 10px;
-  display: inline-block; }
-
-/* line 1979, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.progress.plain {
-  height: 15px;
-  margin-bottom: 0;
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  background: #eeeeee;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none; }
-
-/* line 1990, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.progress.plain .bar {
-  float: left;
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  width: 0;
-  height: 100%;
-  font-size: 12px;
-  color: #ffffff;
-  text-align: center;
-  text-shadow: none;
-  background: #DC3E38;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none; }
-
-/*-----------------------------------------------------------------------------------*/
-/*	18. PRICING TABLE
-/*-----------------------------------------------------------------------------------*/
-/* line 2009, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.pricing {
-  overflow: hidden;
-  text-align: center;
-  padding-bottom: 10px;
-  display: block; }
-
-/* line 2015, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.pricing ul {
-  padding: 0; }
-
-/* line 2018, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.pricing .btn {
-  margin: 0; }
-
-/* line 2021, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.pricing .plan {
-  background: #eeeeee;
-  padding: 10px 0; }
-
-/* line 2025, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.pricing .plan h3 {
-  font-size: 22px;
-  line-height: 40px;
-  margin: 0;
-  padding: 15px 0 0 0;
-  color: #4d4d4d; }
-
-/* line 2032, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.pricing .plan h4 {
-  padding: 0 0 25px 0;
-  margin: 0 25px; }
-
-/* line 2036, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.pricing .plan h4 span {
-  color: #DC3E38; }
-
-/* line 2039, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.pricing .plan h4 .amount {
-  display: block;
-  text-align: center; }
-
-/* line 2043, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.pricing .plan h4 .amount {
-  font-size: 45px;
-  padding-bottom: 10px; }
-
-/* line 2047, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.pricing .plan h4 .amount span {
-  vertical-align: super;
-  font-size: 20px;
-  font-weight: 400; }
-
-/* line 2052, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.pricing .plan ul {
-  margin: 15px 0 0 0;
-  padding: 0 25px;
-  list-style: none; }
-
-/* line 2057, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.pricing .plan ul li {
-  padding: 5px 0; }
-
-/* line 2060, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.pricing .plan ul li:last-child {
-  padding-bottom: 20px; }
-
-/* line 2063, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.pricing .plan h3 {
-  text-transform: uppercase; }
-
-/* line 2066, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.pricing .select {
-  padding: 27px 0; }
-
-/*-----------------------------------------------------------------------------------*/
-/*	19. PARALAX
-/*-----------------------------------------------------------------------------------*/
-/* line 2072, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.parallax {
-  background: url(style/images/art/parallax1.jpg) fixed no-repeat center center;
+/** Background Images **/
+.bg-image-rocks {
+  background: url('../img/background-images/rocks.jpg') scroll top no-repeat;
   -webkit-background-size: cover;
-  background-size: cover;
-  position: relative;
-  color: #FFF; }
-
-/* line 2079, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.parallax .inner {
-  padding-top: 130px;
-  padding-bottom: 130px; }
-
-/* line 2083, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.parallax a {
-  color: #DC3E38; }
-
-/* line 2086, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.parallax h2 {
-  font-size: 28px;
-  line-height: 34px; }
-
-/* line 2090, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.parallax .lead {
-  color: #FFF; }
-
-/* line 2093, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.parallax h1,
-.parallax h2,
-.parallax h3,
-.parallax h4,
-.parallax h5,
-.parallax h6 {
-  color: #fff; }
-
-/* line 2101, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.parallax.mobile {
-  background-attachment: scroll !important; }
-
-/* line 2104, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.parallax.parallax1 {
-  background-image: url(style/images/art/parallax1.jpg); }
-
-/* line 2107, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.parallax.parallax2 {
-  background-image: url(style/images/art/parallax2.jpg); }
-
-/* line 2110, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.parallax.parallax3 {
-  background-image: url(style/images/art/parallax3.jpg); }
-
-/*-----------------------------------------------------------------------------------*/
-/*	20. SOCIAL ICONS
-/*-----------------------------------------------------------------------------------*/
-/* line 2116, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social {
-  padding: 0;
-  margin: 0;
-  font-size: 0;
-  line-height: 1; }
-
-/* line 2122, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social li {
-  display: inline-block;
-  font-family: 'fontello-social';
-  margin-right: 5px;
-  margin-bottom: 5px; }
-
-/* line 2128, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.text-center .social li {
-  margin: 0 3px; }
-
-/* line 2131, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social.pull-right li {
-  margin: 0 0 0 5px; }
-
-/* line 2134, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social li a {
-  display: table; }
-
-/* line 2137, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social li a i {
-  text-align: center;
-  display: table-cell;
-  vertical-align: middle;
-  color: #FFF;
-  width: 30px;
-  height: 30px;
-  font-size: 14px;
-  line-height: 30px;
-  display: inline-block;
-  text-align: center;
-  -webkit-transition: all 200ms ease-in;
-  -o-transition: all 200ms ease-in;
-  -moz-transition: all 200ms ease-in;
-  opacity: 1; }
-
-/* line 2153, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-pinterest {
-  background-color: #c53942; }
-
-/* line 2156, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-rss {
-  background-color: #e86f04; }
-
-/* line 2159, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-facebook {
-  background-color: #4470cf; }
-
-/* line 2162, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-twitter {
-  background-color: #5daed5; }
-
-/* line 2165, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-flickr {
-  background-color: #ff0088; }
-
-/* line 2168, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-dribbble {
-  background-color: #d07ead; }
-
-/* line 2171, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-behance {
-  background-color: #098ffa; }
-
-/* line 2174, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-linkedin {
-  background-color: #3393c1; }
-
-/* line 2177, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-vimeo {
-  background-color: #099fc7; }
-
-/* line 2180, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-youtube {
-  background-color: #c8312b; }
-
-/* line 2183, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-skype {
-  background-color: #2ebbf0; }
-
-/* line 2186, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-tumblr {
-  background-color: #5d82a4; }
-
-/* line 2189, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-delicious {
-  background-color: #3274d1; }
-
-/* line 2192, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-500px {
-  background-color: #00a6df; }
-
-/* line 2195, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-grooveshark {
-  background-color: #f66c00; }
-
-/* line 2198, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-forrst {
-  background-color: #2f7935; }
-
-/* line 2201, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-digg {
-  background-color: #1b5891; }
-
-/* line 2204, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-blogger {
-  background-color: #fc6605; }
-
-/* line 2207, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-klout {
-  background-color: #d8390f; }
-
-/* line 2210, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-dropbox {
-  background-color: #016aab; }
-
-/* line 2213, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-github {
-  background-color: #4073a6; }
-
-/* line 2216, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-songkick {
-  background-color: #ff0030; }
-
-/* line 2219, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-posterous {
-  background-color: #eac954; }
-
-/* line 2222, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-appnet {
-  background-color: #0291c9; }
-
-/* line 2225, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-gplus {
-  background-color: #a84539; }
-
-/* line 2228, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-stumbleupon {
-  background-color: #eb4923; }
-
-/* line 2231, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-lastfm {
-  background-color: #be0c02; }
-
-/* line 2234, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-spotify {
-  background-color: #7cc011; }
-
-/* line 2237, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-instagram {
-  background-color: #a4765c; }
-
-/* line 2240, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-evernote {
-  background-color: #82d15c; }
-
-/* line 2243, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-paypal {
-  background-color: #2a608e; }
-
-/* line 2246, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-picasa {
-  background-color: #9864ae; }
-
-/* line 2249, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social .icon-s-soundcloud {
-  background-color: #ff680d; }
-
-/* line 2252, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-pinterest {
-  background-color: #b0363e; }
-
-/* line 2255, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-rss {
-  background-color: #cf6508; }
-
-/* line 2258, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-facebook {
-  background-color: #4066b9; }
-
-/* line 2261, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-twitter {
-  background-color: #569cbe; }
-
-/* line 2264, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-flickr {
-  background-color: #e3057b; }
-
-/* line 2267, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-dribbble {
-  background-color: #ba729b; }
-
-/* line 2270, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-behance {
-  background-color: #0d81de; }
-
-/* line 2273, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-linkedin {
-  background-color: #3185ad; }
-
-/* line 2276, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-vimeo {
-  background-color: #0d8fb2; }
-
-/* line 2279, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-youtube {
-  background-color: #b32f2a; }
-
-/* line 2282, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-skype {
-  background-color: #2da8d6; }
-
-/* line 2285, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-tumblr {
-  background-color: #567694; }
-
-/* line 2288, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-delicious {
-  background-color: #306abb; }
-
-/* line 2291, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-500px {
-  background-color: #0595c7; }
-
-/* line 2294, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-grooveshark {
-  background-color: #db6305; }
-
-/* line 2297, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-forrst {
-  background-color: #2e6e33; }
-
-/* line 2300, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-digg {
-  background-color: #1c5183; }
-
-/* line 2303, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-blogger {
-  background-color: #e05e09; }
-
-/* line 2306, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-klout {
-  background-color: #c13612; }
-
-/* line 2309, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-dropbox {
-  background-color: #06619a; }
-
-/* line 2312, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-github {
-  background-color: #3d6995; }
-
-/* line 2315, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-songkick {
-  background-color: #e3052f; }
-
-/* line 2318, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-posterous {
-  background-color: #d1b44e; }
-
-/* line 2321, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-appnet {
-  background-color: #0783b4; }
-
-/* line 2324, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-gplus {
-  background-color: #974136; }
-
-/* line 2327, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-stumbleupon {
-  background-color: #d14423; }
-
-/* line 2330, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-lastfm {
-  background-color: #aa0f07; }
-
-/* line 2333, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-spotify {
-  background-color: #71ac14; }
-
-/* line 2336, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-instagram {
-  background-color: #946c55; }
-
-/* line 2339, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-evernote {
-  background-color: #76bb55; }
-
-/* line 2342, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-paypal {
-  background-color: #295880; }
-
-/* line 2345, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-picasa {
-  background-color: #895c9c; }
-
-/* line 2348, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.social a:hover .icon-s-soundcloud {
-  background-color: #e35f10; }
-
-/*-----------------------------------------------------------------------------------*/
-/*	21. FANCYBOX
-/*-----------------------------------------------------------------------------------*/
-/* line 2354, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-#fancybox-thumbs ul {
-  max-width: 10000px !important; }
-
-/* line 2357, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.info.hidden {
-  display: none; }
-
-/* line 2360, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.fancybox-wrap {
-  background: #FFF !important; }
-
-/* line 2363, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.fancybox-title,
-.fancybox-error {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 15px !important;
-  line-height: 26px !important;
-  font-weight: normal !important;
-  color: #707070; }
-
-/* line 2371, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.fancybox-title h2,
-.fancybox-title h3 {
-  margin-bottom: 5px;
-  font-family: 'bebas_neuebold';
-  margin-top: 0;
-  color: #4d4d4d;
-  margin-bottom: 10px;
-  font-weight: normal;
-  letter-spacing: 1px; }
-
-/* line 2381, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.fancybox-skin {
-  color: #707070 !important; }
-
-/* line 2384, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.fancybox-title-inside-wrap {
-  padding: 20px !important; }
-
-/* line 2387, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.fancybox-nav span {
-  width: 36px !important;
-  height: 36px !important;
-  margin-top: -18px !important; }
-
-/* line 2392, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.fancybox-close {
-  top: 10px !important;
-  right: 10px !important;
-  width: 36px !important;
-  height: 36px !important; }
-
-/* line 2398, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.fancybox-close:before,
-.fancybox-prev span:before,
-.fancybox-next span:before {
-  font-family: 'fontello';
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  display: inline-block;
-  text-decoration: inherit;
-  margin-right: 0 !important;
-  margin-top: 5px !important;
-  text-align: center;
-  width: 36px !important;
-  font-size: 20px !important; }
-
-/* line 2413, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.fancybox-close,
-.fancybox-prev span,
-.fancybox-next span {
-  background: #FFF !important;
-  color: #595959 !important;
-  text-align: center !important;
-  -webkit-transition: all 200ms ease-in !important;
-  -o-transition: all 200ms ease-in !important;
-  -moz-transition: all 200ms ease-in !important;
-  opacity: 0; }
-
-/* line 2424, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.fancybox-close:hover,
-.fancybox-prev span:hover,
-.fancybox-next span:hover {
-  color: #FFF !important;
-  background: #DC3E38 !important; }
-
-/* line 2430, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.fancybox-wrap:hover .fancybox-close,
-.fancybox-wrap:hover .fancybox-prev span,
-.fancybox-wrap:hover .fancybox-next span {
-  opacity: 1; }
-
-/* line 2435, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.fancybox-prev span:before {
-  content: ""; }
-
-/* line 2438, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.fancybox-next span:before {
-  content: ""; }
-
-/* line 2441, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.fancybox-close:before {
-  content: "✕"; }
-
-/* line 2444, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-#fancybox-loading {
-  margin-top: -18px !important;
-  margin-left: -18px !important;
-  opacity: 1 !important; }
-
-/* line 2449, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-#fancybox-loading div {
-  height: 36px !important;
-  width: 36px !important;
-  position: relative !important;
-  -webkit-animation: rotation .8s infinite linear !important;
-  -moz-animation: rotation .8s infinite linear !important;
-  -o-animation: rotation .8s infinite linear !important;
-  animation: rotation .8s infinite linear !important;
-  border-left: 3px solid rgba(239, 95, 96, 0.15) !important;
-  border-right: 3px solid rgba(239, 95, 96, 0.15) !important;
-  border-bottom: 3px solid rgba(239, 95, 96, 0.15) !important;
-  border-top: 3px solid rgba(239, 95, 96, 0.8) !important;
-  border-radius: 100% !important; }
-
-/* line 2463, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.fancybox-overlay {
-  background: rgba(27, 27, 27, 0.94) !important; }
-
-/* line 2466, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.fancybox-opened .fancybox-skin {
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.33);
-  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.33);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.33); }
-
-/*-----------------------------------------------------------------------------------*/
-/*	22. FEATURES
-/*-----------------------------------------------------------------------------------*/
-/* line 2474, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.font-icons {
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-
-/* line 2479, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.font-icons li {
-  display: inline-block;
-  font-size: 25px;
-  margin-bottom: 10px;
-  padding: 0 10px; }
-
-/* line 2485, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.alert .close {
-  line-height: 28px; }
-
-/* line 2488, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.retina-icons-code i {
-  font-size: 18px; }
-
-/* line 2491, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.retina-icons-code tr td:first-child,
-.retina-icons-code tr th:first-child {
-  text-align: center; }
-
-/* line 2495, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.retina-icons-code code {
-  color: #707070;
-  background: none;
-  white-space: normal; }
-
-/* line 2500, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.table-bordered {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-left: none;
-  background: #fff; }
-
-/* line 2505, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.table-bordered th,
-.table-bordered td {
-  border-left: 1px solid rgba(0, 0, 0, 0.1); }
-
-/* line 2509, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.retina-icons-code td {
-  vertical-align: middle !important; }
-
-/* line 2512, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.table th,
-.table td {
-  border-top: 1px solid rgba(0, 0, 0, 0.1); }
-
-/* line 2516, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.flats {
-  margin-bottom: -50px; }
-
-/* line 2519, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.flats .col-sm-2 {
-  height: 160px; }
-
-/*-----------------------------------------------------------------------------------*/
-/*	23. DIVIDERS
-/*-----------------------------------------------------------------------------------*/
-/* line 2525, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.divide0 {
-  width: 100%;
-  height: 0px; }
-
-/* line 2529, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.divide2 {
-  width: 100%;
-  height: 2px; }
-
-/* line 2533, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.divide3 {
-  width: 100%;
-  height: 3px; }
-
-/* line 2537, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.divide5 {
-  width: 100%;
-  height: 5px; }
-
-/* line 2541, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.divide10 {
-  width: 100%;
-  height: 10px; }
-
-/* line 2545, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.divide15 {
-  width: 100%;
-  height: 15px; }
-
-/* line 2549, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.divide20 {
-  width: 100%;
-  height: 20px; }
-
-/* line 2553, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.divide25 {
-  width: 100%;
-  height: 25px; }
-
-/* line 2557, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.divide30 {
-  width: 100%;
-  height: 30px; }
-
-/* line 2561, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.divide35 {
-  width: 100%;
-  height: 35px; }
-
-/* line 2565, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.divide40 {
-  width: 100%;
-  height: 40px; }
-
-/* line 2569, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.divide45 {
-  width: 100%;
-  height: 40px; }
-
-/* line 2573, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.divide50 {
-  width: 100%;
-  height: 50px; }
-
-/* line 2577, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.divide55 {
-  width: 100%;
-  height: 55px; }
-
-/* line 2581, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.divide60 {
-  width: 100%;
-  height: 60px; }
-
-/* line 2585, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.divide65 {
-  width: 100%;
-  height: 65px; }
-
-/* line 2589, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.divide70 {
-  width: 100%;
-  height: 70px; }
-
-/* line 2593, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.divide75 {
-  width: 100%;
-  height: 75px; }
-
-/* line 2597, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.divide80 {
-  width: 100%;
-  height: 80px; }
-
-/* line 2601, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.divide85 {
-  width: 100%;
-  height: 85px; }
-
-/* line 2605, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.divide100 {
-  width: 100%;
-  height: 100px; }
-
-/* line 2609, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.rm0 {
-  margin-right: 0px; }
-
-/* line 2612, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.rm1 {
-  margin-right: 1px; }
-
-/* line 2615, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.rm2 {
-  margin-right: 2px; }
-
-/* line 2618, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.rm5 {
-  margin-right: 5px; }
-
-/* line 2621, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.rm6 {
-  margin-right: 6px; }
-
-/* line 2624, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.rm10 {
-  margin-right: 10px; }
-
-/* line 2627, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.rm15 {
-  margin-right: 15px; }
-
-/* line 2630, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.rm20 {
-  margin-right: 20px; }
-
-/* line 2633, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.rm25 {
-  margin-right: 25px; }
-
-/* line 2636, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.rm30 {
-  margin-right: 30px; }
-
-/* line 2639, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.rm40 {
-  margin-right: 40px; }
-
-/* line 2642, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.rm50 {
-  margin-right: 50px; }
-
-/* line 2645, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.lm0 {
-  margin-left: 0px; }
-
-/* line 2648, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.lm1 {
-  margin-left: 1px; }
-
-/* line 2651, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.lm5 {
-  margin-left: 5px; }
-
-/* line 2654, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.lm7 {
-  margin-left: 7px; }
-
-/* line 2657, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.lm10 {
-  margin-left: 10px; }
-
-/* line 2660, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.lm15 {
-  margin-left: 15px; }
-
-/* line 2663, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.lm20 {
-  margin-left: 20px; }
-
-/* line 2666, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.lm25 {
-  margin-left: 25px; }
-
-/* line 2669, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.lm30 {
-  margin-left: 25px; }
-
-/* line 2672, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.lm40 {
-  margin-left: 40px; }
-
-/* line 2675, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.rp5 {
-  padding-right: 5px; }
-
-/* line 2678, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.rp10 {
-  padding-right: 10px; }
-
-/* line 2681, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.rp15 {
-  padding-right: 15px; }
-
-/* line 2684, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.rp20 {
-  padding-right: 20px; }
-
-/* line 2687, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.rp30 {
-  padding-right: 30px; }
-
-/* line 2690, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.rp50 {
-  padding-right: 50px; }
-
-/* line 2693, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.lp0 {
-  padding-left: 0px; }
-
-/* line 2696, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.lp10 {
-  padding-left: 10px; }
-
-/* line 2699, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.lp20 {
-  padding-left: 20px; }
-
-/* line 2702, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.lp30 {
-  padding-left: 30px; }
-
-/* line 2705, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tp0 {
-  padding-top: 0 !important; }
-
-/* line 2708, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tp3 {
-  padding-top: 3px; }
-
-/* line 2711, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tp5 {
-  padding-top: 5px; }
-
-/* line 2714, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tp10 {
-  padding-top: 10px; }
-
-/* line 2717, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tp20 {
-  padding-top: 20px; }
-
-/* line 2720, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tp25 {
-  padding-top: 25px; }
-
-/* line 2723, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tp30 {
-  padding-top: 30px; }
-
-/* line 2726, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tp40 {
-  padding-top: 40px; }
-
-/* line 2729, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tm4 {
-  margin-top: 4px; }
-
-/* line 2732, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tm5 {
-  margin-top: 5px; }
-
-/* line 2735, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tm7 {
-  margin-top: 7px; }
-
-/* line 2738, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tm10 {
-  margin-top: 10px; }
-
-/* line 2741, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tm15 {
-  margin-top: 15px; }
-
-/* line 2744, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tm20 {
-  margin-top: 20px; }
-
-/* line 2747, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.tm40 {
-  margin-top: 40px; }
-
-/* line 2750, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.mbm1 {
-  margin-bottom: -1px; }
-
-/* line 2753, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.bp0 {
-  padding-bottom: 0 !important; }
-
-/* line 2756, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.bp10 {
-  padding-bottom: 10px !important; }
-
-/* line 2759, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.bp20 {
-  padding-bottom: 20px !important; }
-
-/* line 2762, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.bm0 {
-  margin-bottom: 0 !important; }
-
-/* line 2765, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.bm5 {
-  margin-bottom: 5px !important; }
-
-/* line 2768, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.bm6 {
-  margin-bottom: 6px !important; }
-
-/* line 2771, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.bm10 {
-  margin-bottom: 10px !important; }
-
-/* line 2774, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.bm15 {
-  margin-bottom: 15px !important; }
-
-/* line 2777, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.bm20 {
-  margin-bottom: 20px !important; }
-
-/* line 2780, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.bm25 {
-  margin-bottom: 25px !important; }
-
-/* line 2783, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.bm30 {
-  margin-bottom: 30px !important; }
-
-/* line 2786, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.bm50 {
-  margin-bottom: 50px !important; }
-
-/* line 2789, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.bp50 {
-  padding-bottom: 50px !important; }
-
-/*-----------------------------------------------------------------------------------*/
-/*	24. RESPONSIVE
-/*-----------------------------------------------------------------------------------*/
-@media (min-width: 1950px) {
-  /* line 2796, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .full-portfolio .isotope .item,
-  .full-portfolio .isotope .grid-sizer {
-    width: 16.66667%; } }
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* line 2802, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .full-portfolio .isotope .item,
-  .full-portfolio .isotope .grid-sizer {
-    width: 25%; } }
-@media (min-width: 992px) {
-  /* line 2809, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .nav.navbar-nav > li:last-of-type > ul {
-    left: auto;
-    right: 0; }
-
-  /* line 2813, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .nav.navbar-nav > li:last-of-type > ul ul {
-    left: auto;
-    right: 100%;
-    margin-top: -1px;
-    margin-right: -1px;
-    border-right: 1px solid rgba(0, 0, 0, 0.15) !important; }
-
-  /* line 2820, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar .dropdown-submenu > a:after {
-    display: none; }
-
-  /* line 2823, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar .dropdown-submenu > .dropdown-menu:before {
-    display: none; }
-
-  /* line 2826, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar .dropdown-submenu > .dropdown-menu {
-    margin-top: 0;
-    padding-top: 0; }
-
-  /* line 2830, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .dropdown-submenu {
-    position: relative; }
-
-  /* line 2833, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .dropdown-submenu > .dropdown-menu {
-    top: 0;
-    left: 100%;
-    margin-left: 0; }
-
-  /* line 2838, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .dropdown-submenu > .dropdown-menu li {
-    border-left: 1px solid rgba(0, 0, 0, 0.15) !important; }
-
-  /* line 2841, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .dropdown-submenu:hover > .dropdown-menu {
-    display: block; }
-
-  /* line 2844, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .dropdown-submenu > a:after {
-    display: block;
-    content: " ";
-    float: right;
-    width: 0;
-    height: 0;
-    margin-top: 5px;
-    margin-right: -10px; }
-
-  /* line 2856, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .dropdown-submenu.pull-left {
-    float: none; }
-
-  /* line 2859, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .dropdown-submenu.pull-left > .dropdown-menu {
-    left: -100%;
-    margin-left: 10px; }
-
-  /* line 2863, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .open > .dropdown-menu,
-  .open > .dropdown-menu > .dropdown-submenu > .dropdown-menu {
-    animation-name: slidenavAnimation;
-    animation-duration: .3s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-    -webkit-animation-name: slidenavAnimation;
-    -webkit-animation-duration: .3s;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease;
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-name: slidenavAnimation;
-    -moz-animation-duration: .3s;
-    -moz-animation-iteration-count: 1;
-    -moz-animation-timing-function: ease;
-    -moz-animation-fill-mode: forwards; }
-
-  @keyframes slidenavAnimation {
-    from {
-      opacity: 0; }
-    to {
-      opacity: 1; } }
-  @-webkit-keyframes slidenavAnimation {
-    from {
-      opacity: 0; }
-    to {
-      opacity: 1; } } }
-@media (max-width: 991px) {
-  /* line 2899, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar-brand {
-    position: relative;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    margin: 0; }
-
-  /* line 2906, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .btn.responsive-menu {
-    display: block; }
-
-  /* line 2909, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar .nav,
-  .navbar .dropup,
-  .navbar .dropdown,
-  .navbar .collapse {
-    position: relative; }
-
-  /* line 2915, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar .dropdown-menu {
-    position: relative;
-    left: inherit;
-    top: inherit;
-    float: none;
-    width: auto;
-    display: block !important;
-    background: none;
-    padding: 0; }
-
-  /* line 2925, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar .dropdown-menu li {
-    border: none; }
-
-  /* line 2928, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar-nav > li > a,
-  .navbar .dropdown-menu li a,
-  .navbar li a:hover {
-    border-top: 1px solid rgba(0, 0, 0, 0.15); }
-
-  /* line 2933, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar-nav > li:first-child > a {
-    border-top: none; }
-
-  /* line 2936, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar .nav .open > a,
-  .navbar .nav .open > a:hover,
-  .navbar .nav .open > a:focus {
-    background: none;
-    border-color: rgba(0, 0, 0, 0.15); }
-
-  /* line 2942, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar-nav > li > a,
-  .navbar .dropdown-menu li a,
-  .navbar .dropdown-menu li a:hover,
-  .navbar .dropdown-menu li a.active {
-    padding: 12px 0 !important; }
-
-  /* line 2948, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar-nav .open .dropdown-menu > li > a {
-    line-height: 1; }
-
-  /* line 2955, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar-nav > li > a,
-  .navbar .dropdown-menu li a {
-    color: #FFF !important; }
-
-  /* line 2959, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar .dropdown-menu {
-    padding-left: 20px; }
-
-  /* line 2962, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar-nav > li {
-    border: none; }
-
-  /* line 2965, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar .btn.responsive-menu {
-    margin: 53px 0; }
-
-  /* line 2968, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar.fixed .btn.responsive-menu {
-    margin: 13px 0; }
-
-  /* line 2971, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar-header {
-    float: left;
-    width: 100%;
-    background: #FFF !important; }
-
-  /* line 2976, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar-header:after {
-    content: '';
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden; }
-
-  /* line 2983, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar .container {
-    width: 100%;
-    padding: 0; }
-
-  /* line 2987, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar .navbar-collapse {
-    width: 100%;
-    float: none !important;
-    margin: 0;
-    max-height: none;
-    text-align: left;
-    overflow: hidden;
-    background: #38393b; }
-
-  /* line 2996, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar .navbar-nav {
-    width: 720px;
-    margin: 20px auto 0;
-    padding: 0; }
-
-  /* line 3001, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar .basic-wrapper {
-    width: 720px;
-    margin: 0 auto;
-    display: block;
-    text-align: center; }
-
-  /* line 3007, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  figure img {
-    width: 100%; }
-
-  /* line 3010, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar .dropdown-menu:before,
-  .navbar li.social-dropdown {
-    display: none !important; }
-
-  /* line 3014, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar .dropdown-menu li {
-    background: none; }
-
-  /* line 3017, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  footer p.pull-left,
-  footer ul.pull-right {
-    float: none !important;
-    text-align: center; }
-
-  /* line 3022, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .sub-footer p {
-    margin-bottom: 10px !important; } }
-@media (min-width: 768px) and (max-width: 991px) {
-  /* line 3027, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .container {
-    padding-right: 15px;
-    padding-left: 15px; }
-
-  /* line 3031, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .full-portfolio .isotope .item,
-  .full-portfolio .isotope .grid-sizer,
-  .classic-masonry .isotope .item {
-    width: 33.3339%; } }
-@media (max-width: 767px) {
-  /* line 3038, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .full-portfolio .isotope .item,
-  .full-portfolio .isotope .grid-sizer,
-  .classic-masonry .isotope .item {
-    width: 100%; }
-
-  /* line 3043, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .container {
-    padding-right: 20px;
-    padding-left: 20px; }
-
-  /* line 3047, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar .container {
-    padding-right: 0px;
-    padding-left: 0px; }
-
-  /* line 3051, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar .navbar-nav {
-    width: 100%;
-    margin: 20px auto 0;
-    padding-left: 20px;
-    padding-right: 20px; }
-
-  /* line 3057, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar .basic-wrapper {
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 0 auto;
-    display: block; }
-
-  /* line 3064, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar .navbar-nav > li {
-    margin-left: 0; }
-
-  /* line 3067, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  [class*="col-"] {
-    margin-bottom: 30px; }
-
-  /* line 3070, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  footer [class*="col-"]:last-of-type {
-    margin-bottom: 0; }
-
-  /* line 3073, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .forms [class*="col-"] {
-    margin-bottom: 0px; }
-
-  /* line 3076, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .services-1 .divide30 {
-    display: none; }
-
-  /* line 3079, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  #comments .user {
-    display: none; }
-
-  /* line 3082, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  #comments ul.children {
-    padding: 0 0 0 20px; }
-
-  /* line 3085, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  #comments .arrow-box {
-    margin-left: 0; }
-
-  /* line 3088, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .about-author .author-image {
-    display: none; }
-
-  /* line 3091, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .sidebar {
-    margin-top: 70px;
-    padding-left: 15px !important; }
-
-  /* line 3095, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .dropdown.pull-right {
-    display: block;
-    padding: 10px 0 5px !important;
-    float: none !important;
-    clear: both; }
-
-  /* line 3101, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .portfolio .pull-right > .dropdown-menu {
-    left: 0 !important;
-    right: auto; }
-
-  /* line 3105, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .portfolio .button-group.dropdown-menu:before {
-    left: 15px;
-    right: auto; }
-
-  /* line 3109, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  [class*="col-sm-"].lp30 {
-    padding-left: 15px; }
-
-  /* line 3112, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-  .navbar.fixed .navbar-collapse .navbar-nav {
-    max-height: 230px !important;
-    overflow-y: scroll; } }
-/* line 3117, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.brick-wall:first-child {
-  padding-bottom: 10px; }
-
-/* line 3120, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.brick {
-  text-align: center;
-  opacity: 0.8; }
-
-/* line 3124, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.brick-image {
-  width: 100%; }
-
-/* line 3127, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.brick:hover {
-  opacity: 1; }
-
-/* line 3130, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-footer {
-  margin-top: 30px; }
-
-/* line 3133, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.time {
-  font-weight: bold; }
-
-/* line 3136, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.name {
-  text-align: center;
-  padding-top: 1em; }
-
-/* line 3140, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.video {
-  padding: 20px;
-  text-align: center; }
-
-/* line 3144, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.schedule-image {
-  width: 90%;
-  margin: 0 auto; }
-
-/* line 3148, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.day ul {
-  list-style: none;
-  padding-left: 0; }
-
-/* line 3152, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.day {
-  border-left: 1px solid #E2E2E2; }
-
-/* line 3155, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.class-types {
-  padding-top: 20px; }
-
-/* line 3159, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.price-table td, .price-table th {
-  text-align: center; }
-
-/* line 3163, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.info-pricing {
-  text-align: left; }
-
-/* line 3166, /Users/kurczaczek/ay3/ay3/source/stylesheets/style.css.scss */
-.facebook-feed {
-  text-align: center; }
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+/** For retina purposes create a 2x image and uncomment this code **/
+/**
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .bg-image-rocks {
+    background-image: url('../img/background-images/rocks@2x.jpg');
+  }
+}
+**/
+
+.bg-image-readers {
+  background: url('../img/background-images/readers.jpg') scroll center no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+/** For retina purposes create a 2x image and uncomment this code **/
+/**
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .bg-image-readers {
+    background-image: url('../img/background-images/readers@2x.jpg');
+  }
+}
+**/
+
+.bg-image-road {
+  background: url('../img/background-images/road.jpg') scroll center no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+/** For retina purposes create a 2x image and uncomment this code **/
+/**
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .bg-image-road {
+    background-image: url('../img/background-images/road@2x.jpg');
+  }
+}
+**/
+
+.bg-image-coffee {
+  background: url('../img/background-images/coffee.jpg') scroll center no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+/** For retina purposes create a 2x image and uncomment this code **/
+/**
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .bg-image-coffee {
+    background-image: url('../img/background-images/coffee@2x.jpg');
+  }
+}
+**/
+
+.bg-image-typewriter {
+  background: url('../img/background-images/typewriter.jpg') scroll center no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+/** For retina purposes create a 2x image and uncomment this code **/
+/**
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .bg-image-typewriter {
+    background-image: url('../img/background-images/typewriter@2x.jpg');
+  }
+}
+**/
+
+.bg-image-party {
+  background: url('../img/background-images/party.jpg') scroll center no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+/** For retina purposes create a 2x image and uncomment this code **/
+/**
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .bg-image-party {
+    background-image: url('../img/background-images/party@2x.jpg');
+  }
+}
+**/
+
+.bg-image-macdesk {
+  background: url('../img/background-images/macdesk.jpg') scroll center no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+/** For retina purposes create a 2x image and uncomment this code **/
+/**
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .bg-image-macdesk {
+    background-image: url('../img/background-images/macdesk@2x.jpg');
+  }
+}
+**/
+
+.bg-image-desk {
+  background: url('../img/background-images/desk-sq.jpg') scroll center no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+/** For retina purposes create a 2x image and uncomment this code **/
+/**
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .bg-image-macdesk {
+    background-image: url('../img/background-images/macdesk@2x.jpg');
+  }
+}
+**/
+
+.bg-image-kindle {
+  background: url('../img/background-images/kindle.jpg') scroll center no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+/** For retina purposes create a 2x image and uncomment this code **/
+/**
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .bg-image-kindle {
+    background-image: url('../img/background-images/kindle@2x.jpg');
+  }
+}
+**/
+
+.bg-image-lamp {
+  background: url('../img/background-images/lamp.jpg') scroll center no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+/** For retina purposes create a 2x image and uncomment this code **/
+/**
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .bg-image-lamp {
+    background-image: url('../img/background-images/lamp@2x.jpg');
+  }
+}
+**/
+
+.bg-image-operator {
+  background: url('../img/background-images/operator.jpg') scroll center no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+/** For retina purposes create a 2x image and uncomment this code **/
+/**
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .bg-image-operator {
+    background-image: url('../img/background-images/operator@2x.jpg');
+  }
+}
+**/
+
+.bg-image-aboutme {
+  background: url('../img/background-images/aboutme.jpg') scroll center no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+/** For retina purposes create a 2x image and uncomment this code **/
+/**
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .bg-image-aboutme {
+    background-image: url('../img/background-images/aboutme@2x.jpg');
+  }
+}
+**/
+
+.bg-image-map {
+  background: url('../img/background-images/map.jpg') scroll center no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+/** For retina purposes create a 2x image and uncomment this code **/
+/**
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .bg-image-map {
+    background-image: url('../img/background-images/map@2x.jpg');
+  }
+}
+**/
+
+.bg-image-bear {
+  background: url('../img/background-images/bear.jpg') scroll center no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+/** For retina purposes create a 2x image and uncomment this code **/
+/**
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .bg-image-bear {
+    background-image: url('../img/background-images/bear@2x.jpg');
+  }
+}
+**/
+
+.bg-image-mountainRoad {
+  background: url('../img/background-images/mountainRoad.jpg') scroll center no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+/** For retina purposes create a 2x image and uncomment this code **/
+/**
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .bg-image-mountainRoad {
+    background-image: url('../img/background-images/mountainRoad@2x.jpg');
+  }
+}
+**/

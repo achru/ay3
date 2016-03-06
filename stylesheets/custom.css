@@ -1,0 +1,31 @@
+/* line 1, /Users/kurczaczek/ay3/ay3/source/stylesheets/custom.sass */
+.logo {
+  margin-top: 20px; }
+
+/* line 3, /Users/kurczaczek/ay3/ay3/source/stylesheets/custom.sass */
+.navbar ul li a {
+  font-size: 1.5em; }
+
+/* line 5, /Users/kurczaczek/ay3/ay3/source/stylesheets/custom.sass */
+.tp-banner-2 {
+  height: 600px; }
+
+/* line 7, /Users/kurczaczek/ay3/ay3/source/stylesheets/custom.sass */
+.section-title {
+  text-align: left;
+  padding-bottom: 20px; }
+
+/* line 10, /Users/kurczaczek/ay3/ay3/source/stylesheets/custom.sass */
+.types h5, .pricing h4 {
+  color: #f47a4e; }
+
+/* line 13, /Users/kurczaczek/ay3/ay3/source/stylesheets/custom.sass */
+.schedule h5 {
+  color: #f47a4e; }
+/* line 15, /Users/kurczaczek/ay3/ay3/source/stylesheets/custom.sass */
+.schedule ul {
+  padding: 0;
+  list-style: none; }
+  /* line 18, /Users/kurczaczek/ay3/ay3/source/stylesheets/custom.sass */
+  .schedule ul .time {
+    font-weight: bold; }
