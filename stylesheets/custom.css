@@ -29,3 +29,7 @@
   /* line 18, /Users/kurczaczek/ay3/ay3/source/stylesheets/custom.sass */
   .schedule ul .time {
     font-weight: bold; }
+
+/* line 21, /Users/kurczaczek/ay3/ay3/source/stylesheets/custom.sass */
+.day {
+  min-height: 250px; }

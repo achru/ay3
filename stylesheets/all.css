@@ -11238,6 +11238,10 @@ small,
   .schedule ul .time {
     font-weight: bold; }
 
+/* line 21, /Users/kurczaczek/ay3/ay3/source/stylesheets/custom.sass */
+.day {
+  min-height: 250px; }
+
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
 /* line 3, /Users/kurczaczek/ay3/ay3/source/stylesheets/plugins.css */
 .fancybox-wrap,
