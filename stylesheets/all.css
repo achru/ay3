@@ -12529,3 +12529,7 @@ a {
 /* line 154, /Users/kurczaczek/ay3/ay3/source/stylesheets/color/orange.css */
 .bg-color-theme {
   background-color: #f47a4e; }
+
+/* line 14, /Users/kurczaczek/ay3/ay3/source/stylesheets/all.css.scss */
+.crossed {
+  text-decoration: line-through; }
