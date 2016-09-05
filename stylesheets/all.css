@@ -12533,3 +12533,7 @@ a {
 /* line 14, /Users/kurczaczek/ay3/ay3/source/stylesheets/all.css.scss */
 .crossed {
   text-decoration: line-through; }
+
+/* line 17, /Users/kurczaczek/ay3/ay3/source/stylesheets/all.css.scss */
+.push10 {
+  margin-top: 15px; }
